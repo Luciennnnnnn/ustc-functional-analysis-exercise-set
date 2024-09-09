@@ -1,5 +1,5 @@
 ## 预览
-<img src="figures/preview.jpg" alt="支付宝" style="height: auto;">
+<img src="figures/preview.png" alt="支付宝" style="height: auto;">
 
 ## Change Log
 
