@@ -1,0 +1,1215 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{amsmath}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Uncomment to override  the `A preprint' in the header
+\renewcommand{\headeright}{}
+\renewcommand{\undertitle}{}
+% \renewcommand{\shorttitle}{\textit{arXiv} Template}
+
+%%% Add PDF metadata to help others organize their library
+%%% Once the PDF is generated, you can check the metadata with
+%%% $ pdfinfo template.pdf
+% \hypersetup{
+% pdftitle={Weekly Report},
+% pdfsubject={Weekly Report},
+% pdfauthor={Xin Luo},
+% pdfkeywords={Weekly Report},
+% }
+
+\title{22}
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+
+
+% Upper part of the page
+\includegraphics[width=0.15\textwidth]{figures/Clinking Beer Mugs.pdf}\\[1cm]    
+
+\textsc{\LARGE USTC}\\[1.5cm]
+
+\textsc{\Large Final year project}\\[0.5cm]
+
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries 实变函数与泛函分析习题集}\\[0.4cm]
+
+\HRule \\[1.5cm]
+
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{By:}\\
+Xin
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Source Code:} \\
+\textbf{\url{https://github.com/Luciennnnnnn/DualFormer}}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large \today}
+
+\end{center}
+
+\end{titlepage}
+
+% \begin{abstract}
+% 	\lipsum[1]
+% \end{abstract}
+
+
+% keywords can be removed
+% \keywords{First keyword \and Second keyword \and More}
+
+
+\section{集合与实数}
+\subsection{题目}
+\begin{enumerate}
+    \item $\left[\textbf{选择题}\right]$ 下列条件哪些是实数列 $\left\{a_n\right\}$ 为基本列的充分条件: (1) $\lim _{n, m\to \infty}\left(a_n-a_m\right)=0$; (2) 对任意的 $k$, 均有 $\lim _{n \to \infty}\left(a_{n+k}-a_n\right)=0$; (3) 存在一个收敛到零的数列 $\left\{b_n\right\}$, 使对任意的 $k$ 及充分大的 $n$, 均有 $\left|a_{n+k}-a_n\right| \leq b_n$ \hfill[C]
+    
+    \begin{minipage}[t]{0.45\linewidth}
+    (A) 3 个结论都正确
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) (2)与(3)正确, (1)不正确
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) (1)与(3)正确, (2)不正确
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) (1)正确, (2)与 (3) 不正确
+    \end{minipage}
+
+    \item $\left[\textbf{选择题}\right]$ 下列是一些关于稠密性的结论，判断它们的正确性：（1）在无理数中稠密的数集必在整个实数中稠密；（2）若两个数集的并集在实数中稠密，则其中必有一个数集在实数中稠密；（3）若两个数集分别在关于实数集互为余集的两个数集中稠密，则它们的并集必在整个实数中稠密\hfill[C]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    （A）3个结论都不正确
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （B）3个结论都正确
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    （C）（1）与（3）正确，（2）不正确
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （D）（1）正确，（2）与（3）不正确
+    \end{minipage}
+
+    \item $\left[\textbf{选择题}\right]$ 设 $F_1, F_2, \cdots$ 为一列闭实数集, 则下列结论正确的是:\hfill[D]
+    
+    \begin{minipage}[t]{0.45\linewidth}
+    (A) 若 $G_1, G_2, \cdots$ 为一列互不相交的开集, 且 $F_n \subset G_n, n=1,2, \cdots$, 则 $\bigcup_{n=1}^{\infty} F_n$ 为闭集
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) 若 $G_1, G_2, \cdots$ 为一列互不相交的闭集, 且 $F_n \subset G_n, n=1,2, \cdots$, 则 $\bigcup_{n=1}^{\infty} F_n$ 为闭集
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) 若每个 $F_n$ 均无极限点, 则 $\bigcup_{n=1}^{\infty} F_n$ 为闭集
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) 若 $F_n \subset(n, n+1), n=1,2, \cdots$, 则 $\bigcup_{n=1}^{\infty} F_n$ 为闭集
+    \end{minipage}
+
+    解析：(A)的一个反例考虑一系列单点集$\left\{\frac{1}{n}\right\}$，其中$n$是正整数，这些闭集互不相交，它们的并为$\left\{\frac{1}{n} \mid n \in N \right\}$，然后这个集合不是闭集，因为它的闭包包含0，但是0并不在原集合中。
+
+    \item $\left[\textbf{选择题}\right]$ 设 $F_n \subset(n, n+1), n=1,2, \cdots$,且每个$F_n$为闭集，判断下列结论的
+    正确性:（1）$\bigcup_{n=1}^{\infty} F_n$ 为闭集；（2）定义$f(x)=a_n, x\in(n-1, n), n=1,2, \cdots$, 其中每个$a_n$为常数，则$f$在$\bigcup_{n=1}^{\infty} F_n$上连续。\hfill[B]
+    
+    \begin{minipage}[t]{0.45\linewidth}
+    (A) 2个结论都不正确
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) 2个结论都正确
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) （1）正确，（2）不正确
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) （1）不正确，（2）正确
+    \end{minipage}
+
+    解析：（2）的证明见例1.4.1。
+
+    \item $\left[\textbf{选择题}\right]$ 设 $F_n, n=1,2, \cdots$为实数集中一列互不相交的非空闭集，$F=\bigcup_{n=1}^{\infty} F_n$，在$F$上定义函数$f$如下：当$x \in F_n$时，$f(x)=a_n$，其中$a_n, n=1,2,\cdots$均为实常数，则下列条件：（1）$\left(a_n, b_n\right), n=1,2,\cdots$是一列互不相交的开区间，$F_n \subset (a_n, b_n)$，且点集$\left\{a_n\right\} \cup \left\{b_n\right\}$无极限点；（2）对任意的$x_n \in F_n, n=1,2,\cdots$，点集$\left\{x_n\right\}$无极限点，哪些是函数$f$在$F$上连续的充分条件？\hfill[B]
+    
+    \begin{minipage}[t]{0.45\linewidth}
+    (A) 2个都不是
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) 2个都是
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) （1）是，（2）不是
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) （1）不是，（2）是
+    \end{minipage}
+
+    解析：函数$f$在孤立点处是连续的。函数$f$在$x$点连续$\Leftrightarrow \forall \epsilon > 0, \exists \delta > 0$，当$x \in E \cap \delta(x)$时，均有$f(x) \in \epsilon(f(x))$。而根据孤立点的定义，对于孤立点$x_0$，$\exists \delta > 0$，使得$E \cap \delta(x_0) = \left\{x_0\right\}$，因此对于$\forall \epsilon > 0, \exists \delta > 0$，当$x \in E \cap \delta(x_0)$时，$x$只能取$x_0$，有$f(x) = f(x_0) \in \epsilon(f(x))$成立。也因此，$f$一定在孤立集上连续。
+    对于（1），$f$一定在闭集$F_n$上连续，又点集$\left\{a_n\right\} \cup \left\{b_n\right\}$无极限点，因此$f$在$F$上的所有极限点上连续。对于（2），$F$是一个孤立集，$f$一定在$F$上连续。
+
+    \item $\left[\textbf{选择题}\right]$ 设 $F_n, n=1,2, \cdots$为实数集中一列互不相交的非空闭集，$F=\bigcup_{n=1}^{\infty} F_n$，在$F$上定义函数$f$如下：当$x \in F_n$时，$f(x)=a_n$，其中$a_n, n=1,2,\cdots$均为实常数，则下列条件：（1）若每个$F_n$均无极限点；（2）若 $F_n \subset(n-1, n), n=1,2, \cdots$, 则 $F$ 为闭集；哪些是$F$为闭集的充分条件？\hfill[A]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    (A) 2个都不是
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) 2个都是
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) （1）是，（2）不是
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) （1）不是，（2）是
+    \end{minipage}
+
+    解析：注意$F_n \subset (n - 1, n)$和$F_n \subset (n, n+1)$的区别。如果是前者，那么$F_1 \subset (0, 1)$，如果$F_1 = \left\{\frac{1}{n}\right\}, n=1,2,\cdots$，那么显然$F_1$不为闭集，因为$F_1$的闭包包含$0$，则$F$不为闭集。
+    
+\end{enumerate}
+
+\subsection{有用的结论}
+\begin{enumerate}
+    \item 几类点：内点，外点，边界点，聚点，孤立点
+    \item $E$ = 聚点（内点 + 边界点） + 孤立点
+    
+    \item 单点集没有聚点，单点集的导集为空集，单点集是闭集
+\end{enumerate}
+
+\section{测度与积分}
+\subsection{题目}
+\begin{enumerate}
+    
+    \item $\left[\textbf{选择题}\right]$ 设数集$\left\{a_1,a_2,\cdots\right\}$在实数$R$中稠密，$E\subset R$，$f$和$g$为$E$上的实函数，对$\forall \sigma\in R$，记$B=\bigcup_{n=1}^{\infty}\left[E\left(f>a_n\right)\cap E\left(g<a_n-\sigma\right)\right]$，$C=E\left(f-g>\sigma\right)$。则：\hfill [A]
+    
+    \begin{minipage}[t]{0.45\linewidth}
+    (A) B=C
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) C是B的真子集
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) B是C的真子集
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) B与C互不包含
+    \end{minipage}
+
+    \item $\left[\textbf{选择题}\right]$ 设$f$为$E \subset R$上的一个实函数，对$\sigma \in R$，若数列$\left\{\sigma_n\right\}$严格单减，且$\sigma_n \to \sigma$，则$E\left(f > \sigma\right)=$: \hfill [B]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    (A) $\bigcap_{n=1}^{\infty}E\left(f\geq\sigma_n \right)$
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) $\bigcup_{n=1}^{\infty}E\left(f\geq\sigma_n \right)$
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) $\bigcup_{n=1}^{\infty}E\left(f\leq\sigma_n \right)$
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) $\bigcap_{n=1}^{\infty}E\left(f\leq\sigma_n \right)$
+    \end{minipage}
+
+    \item $\left[\textbf{选择题}\right]$设 $\sum_{n=1}^{\infty} a_n$ 为一个条件收敛级数, 定义
+    $$
+    f(x)=\left\{\begin{array}{lc}
+    a_n, & x \in(n-1, n), n=1,2, \cdots, \\
+    -a_n, & x \in(-n,-n+1), n=1,2, \cdots,
+    \end{array}\right.
+    $$
+    则： \hfill [D]
+
+     \begin{minipage}[t]{0.45\linewidth}
+    (A) $f$ $R$ 上 Lebesgue 可积
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (B) $f$在 $R$ 上 Lebesgue 不可积，但有积分值
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    (C) $\left|f\right|$在 $R$ 上 Lebesgue 不可积，且无积分值
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    (D) $\left|f\right|$在 $R$ 上 Lebesgue 不可积，但有积分值
+    \end{minipage}
+
+    \item $\left[\textbf{判断题}\right]$ 设$f(x)$是有界可测集$E$上的可测函数，则$f(x)$在E上有积分值。
+    
+    答：错。有界可测集上的有界可测函数一定有积分值，对于一般函数则不成立。比如$[-1, 1]$上的函数$\frac{1}{x}$，可测但无积分值。
+    
+    % 虽然有界可测集上的非负可测函数$f(x)$在$E$上总有积分值，但是对于一般函数，可能存在$f^{+}$和$f^{-}$的积分值都为$+\infty$，从而$f$没有积分值。（参考P40）
+    
+    \item $\left[\textbf{判断题}\right]$ 设 $\sum_{n=1}^{\infty} a_n$ 为一个条件收敛级数, 定义
+    $$
+    f(x)=\left\{\begin{array}{lc}
+    a_n, & x \in(n-1, n), n=1,2, \cdots, \\
+    -a_n, & x \in(-n,-n+1), n=1,2, \cdots,
+    \end{array}\right.
+    $$
+    则 $f$ 在 $R$ 上 Lebesgue 可积;
+    
+    相关知识：
+    \begin{enumerate}
+        \item 条件收敛级数：$\sum_{n=1}^{\infty} a_n$收敛，但是$\sum_{n=1}^{\infty} |a_n|$不收敛。
+        \item $f \in L(E) \Leftrightarrow |f| \in L(E)$
+    \end{enumerate}
+
+    答：错。\\
+    $\int_{R} f(x) dx=\int_{R} f^{+}(x) dx - \int_{R} f^{-}(x) dx=\int_{[0, +\infty)} |f(x)| dx - \int_{[0, +\infty)} |f(x)| dx=\sum_{n=1}^{\infty} |a_n| - \sum_{n=1}^{\infty} |a_n|=\infty - \infty$，因此L不可积。\\
+    或者由$f$L可积和$|f|$L可积的等价性，$\int_{R} |f(x)| dx=2\int_{[0, +\infty)} |f(x)| dx=2\sum_{n=1}^{\infty} |a_n|=+\infty$，因此L不可积。
+
+    \item $\left[\textbf{判断题}\right]$ 设 $\sum_{n=1}^{\infty} a_n$ 为一个条件收敛级数, 定义
+    $$
+    f(x)=\left\{\begin{array}{lc}
+    a_n, & x \in(n-1, n), n=1,2, \cdots, \\
+    -a_n, & x \in(-n,-n+1), n=1,2, \cdots,
+    \end{array}\right.
+    $$
+    则$\left|f\right|$在 $R$ 上 Lebesgue 不可积，但有积分值;
+
+    答：正确。$\int_{R} |f(x)| dx=2\int_{[0, +\infty)} |f(x)| dx=2\sum_{n=1}^{\infty} |a_n|=+\infty$，因此$f(x)$L不可积，但$f(x)$有积分值，为$+\infty$。
+
+    \item $\left[\textbf{判断题}\right]$ 设 $\left\{a_n\right\}$ 为一个单调减的实数列, 且 $a_n \rightarrow 0$, 在区间 $[0,+\infty)$ 上定义
+    $$
+    f(x)=(-1)^{n-1} a_n, x \in[n-1, n), n=1,2, \cdots,
+    $$
+
+则 $f$ 在 $[0,+\infty)$ 上 Lebesgue 可积。
+
+答：错。令$a_n=\frac{1}{n}$，则$f^{+}$和$f^{-}$虽然在$[0, +\infty)$上都有积分值，但同时为$+\infty$；或者由于$|f|$在$[0, +\infty)$上Lebesgue不可积，故$f$也不可积。
+    
+    \item \label{proof1} $\left[\textbf{证明题}\right]$ 设$f$为$[0, 1]$上的非负有界可测函数，$Q$ 为$[0,1]$中的无理数集。(1) 若对任意的 $x \in Q$, 均有 $f(x)=0$, 证明 $f$ 在 $[0,1]$ 上存在子集式分割 $D$, 使其积分大和 $S_D=0$,用上积分、下积分等概念证明 $f$ 在 $[0,1]$ 上 Lebesgue 可积, 并求积分值: (2) 若对任意的 $x \in Q$, 均有 $f(x)>0$, 证明 $\int_{[0,1]} f d x>0$ 。
+    
+证: (1) 对分割 $D:[0,1]=P \cup Q$, 其中 $P$ 为 $[0,1]$ 的有理数集, 有 $m(P)=0, m(Q)=1$。故积分上和$S_D=m(P)\sup_{x\in P} \{f(x)\} + m(Q)\sup_{x\in Q} \{f(x)\}$，因为$f$是有界函数，所以存在$K \in N$, 使得$\mathop{sup}\limits_{x\in P} \{f(x)\} <= K$，所以$S_D <= 0\times K + 1\times 0 = 0$。
+
+由于 $f \geq 0$, 故有
+$$
+0 \leq \underline{\int}_{[0,1]} f d x \leq \overline{\int}_{[0,1]} f d x \leq S_D=0,
+$$
+
+于是 $\underline{\int}_{[0,1]} f d x=\overline{\int}_{[0,1]} f d x=0$, 故根据定义, $f$ 在 $[0,1]$ 上可积, 且 $\int_{[0,1]} f d x=0$ 。
+
+(2) 用反证法。若不然, 则有 $\int_{[0,1]} f d x=0$ 。任取 $a>0$, 并记 $E=[0,1]$, 则
+$$
+0=\int_{[0,1]} f d x=\int_{E(f\geq a)} f d x+\int_{E(f<a)} f d x \geq a m[E(f \geq a)], 
+$$
+
+从而有, $m[E(f \geq a)]=0$ 。故 $E(f>0)=\bigcup_{n=1}^{\infty} E\left(f \geq \frac{1}{n}\right)$ 为零测集, 这与假设矛盾。
+
+\item $\left[\textbf{证明题}\right]$ 设 $E$ 为 $R$ 中的一个 Lebesgue 零测集, 在 $R$ 上定义
+$$
+f(x)=\left\{\begin{array}{cc}
+e^{x^2}, & x \in E, \\
+0, & x \notin E .
+\end{array}\right.
+$$
+1. 证明 $f$ 在任意闭区间 $[a, b]$ 上存在分割 $D$, 使其积分大和 $S_D=0$, 并根据定义, 证明 $f$ 在 $[a, b]$ 上 Lebesgue 可积: (10 分) 2. 根据一般可测集上一般函数积分的定义, 证明 $f$ 在 $R$ 上 Lebesgue 可积, 并求 $\int_R f d x$ 。(6 分)
+
+解:
+1. 对分割 $D:[a, b]=E_1 \cup E_2$, 其 中 $E_1=[a, b] \cap E, E_2=[a, b] \cap E^c$。故积分上和$S_D=m(E_1)\sup_{x\in E_1} \{f(x)\} + m(E_2)\sup_{x\in E_2} \{f(x)\}$，因为$f$在$E_1$上是有界函数，所以存在$K \in N$, 使得$\mathop{sup}\limits_{x\in E_1} \{f(x)\} <= K$，所以$S_D <= 0\times K + (b - a)\times 0 = 0$。
+
+由于 $f \geq 0$, 故有
+$$
+0 \leq \underline{\int}_{[a, b]} f d x \leq \overline{\int_{[a, b]}} f d x \leq S_D=0,
+$$
+
+于是 $\underline{\int}_{[a, b]} f d x=\overline{\int_{[a, b]}} f d x=0$, 故根据定义, $f$ 在 $[a, b]$ 上可积, 且 $\int_{[a, b]} f d x=0$ 。
+
+2. 对任意的 $n \in N$, 根据 1 的证明可知, $f$ 在 $[-n, n]$ 上可积, 且 $\int_{[-n, n]} f d x=0$, ,故 $\lim _{n \rightarrow \infty} \int_{[-n, n]} f d x=0$ 。 又由于 $f \geq 0$, 故 $f$ 在 $R$ 上 Lebesgue 可积, 且 $\int_R f d x=0$ 。
+
+\item $\left[\textbf{证明题}\right]$ 设 $E$ 为 $R$ 中的一个 Lebesgue 零测集, 在 $R$ 上定义
+$$
+f(x)=\left\{\begin{array}{cc}
+xe^{|x|}, & x \in E, \\
+0, & x \notin E .
+\end{array}\right.
+$$
+1. 试用积分证明 $f$ 在任意闭区间 $[a, b]$上 Lebesgue 可积，并求$\int_{[a, b]}fdx$的值；2.问$f$在$R$上是否Lebesgue可积，证明你的结论。（必须用定义，即上积分与下积分等概念，否则不给分）
+
+证：参看题\ref{proof1}。
+
+\item $\left[\textbf{证明题}\right]$ 设 $f$为闭区间$[0, 1]$上的一个实可测函数，$Q$为$[0, 1]$中的无理数集。1.如果对于任意的$x\in Q$，均有$f(x)=0$，试用上积分、下积分与积分定义等概念证明$f$在$[0, 1]$上Lebesgue可积，并求积分值。2.如果对任意的$x\in Q$，均有$f(x) > 0$，试证明$\int_{[0, 1]}f dx > 0$。
+
+证：1. 考虑$f^{+}$的第$n$个截断函数
+
+$$
+f_{(n)}^{+}(x)=\left\{\begin{array}{cc}
+f^{+}(x), & 0 \leq f^{+}(x) \leq n\\
+0, & f^{+}(x) > n .
+\end{array}\right.
+$$
+
+对分割 $D:[0,1]=Q \cup Q^{C}$, 其中 $P$ 为 $[0,1]$ 的有理数集, 有 $m(P)=0, m(Q)=1$。故积分上和$S_D=m(P)\sup_{x\in P} \{f_{(n)}^{+}(x)\} + m(Q)\sup_{x\in Q} \{f_{(n)}^{+}(x)\}$，因为$f_{(n)}^{+}$是有界函数，所以存在$K \in N$, 使得$\mathop{sup}\limits_{x\in P} \{f_{(n)}^{+}(x)\} <= K$，所以$S_D <= 0\times K + 1\times 0 = 0$。
+
+由于 $f_{(n)}^{+} \geq 0$, 故有
+$$
+0 \leq \underline{\int}_{[0,1]} f_{(n)}^{+} d x \leq \overline{\int}_{[0,1]} f_{(n)}^{+} d x \leq S_D=0,
+$$
+
+于是 $\underline{\int}_{[0, 1]} f_{(n)}^{+} d x=\overline{\int_{[0, 1]}} f_{(n)}^{+} d x=0$, 故根据定义, $f_{(n)}^{+}$ 在 $[0, 1]$ 上可积, 且 $\int_{[0, 1]} f_{(n)}^{+} d x=0$ 。
+
+因$\left\{\int_{[0, 1]} f_{(n)}^{+} d x\right\}$是一增数列,故$\int_{[0, 1]} f^{+} d x=\lim_{n\to \infty}\int_{[0, 1]} f_{(n)}^{+} d x=0$。
+
+同理可得$\int_{[0, 1]} f^{-} d x=0$，所以$\int_{[0, 1]} f d x=\int_{[0, 1]} f^{+} d x-\int_{[0, 1]} f^{-} d x=0-0=0$。
+
+2.参看7题第二小问。
+
+\item $\left[\textbf{证明题}\right]$ 设$f$在$\left(-\infty, +\infty\right)$上Riemann可积，记$E$为$f$的所有不连续点组成的集合。1.证明$E$为$R$上的Lebesgue可测集，并求$E$的测度；2. 定义$g(x)=\left\{\begin{array}{cc}
+f(x), & x \in E, \\
+0, & x \notin E .
+\end{array}\right.$，试用上积分、下积分与积分定义等概念证明$g$在闭区间$[a, b]$上Lebesgue可积；3.证明$g$在R上也Lebesgue可积，并求$\int_R gdx$的值。
+
+证：1.由Riemann可积的必要条件可知，$E$为$R$上的一个零测集，而零测集总是Lebesgue可测集且测度$m(E)=0$。
+
+2和3.由Riemann可积的必要条件可知，$f$在$(-\infty, +\infty)$上有界。剩下参考第8题。
+
+\item $\left[\textbf{证明题}\right]$ 设$E$为$R$上的Lebesgue有界可测集，$g$为$R$上的有界函数，$A\subset R$，且$m(A)=0$，定义$f(x)=\left\{\begin{array}{cc}
+g(x), & x \in A, \\
+0, & x \notin A .
+\end{array}\right.$ 1.试用定义证明$f$在$E$上Lebesgue可积，并求$\int_E fdx$的值；2.问$f$在$R$上是否Lebesgue可积，证明你的结论。（必须用定义，即上积分与下积分等概念，否则不给分）
+
+证：考虑$f^{+}$的可积性，令分割$D:E=E_1 \cup E_2$，其中$E_1 = A\cap E$，$E_2 = A^{C}\cap E$，因为$E$为$R$上的Lebesgue有界可测集，所以存在$M\in N$，使得$m(E) \leq M$，则$m(E_1)=0, m(E_2) \leq M$。故积分上和$S_D=m(E_1)\sup_{x\in E_1} \{f^{+}(x)\} + m(E_2)\sup_{x\in E_2} \{f^{+}(x)\}$，因为$f^{+}$是有界函数，所以存在$K \in N$, 使得$\mathop{sup}\limits_{x\in E_1} \{f^{+}(x)\} <= K$，所以$S_D <= 0\times K + M\times 0 = 0$。
+
+由于 $f^{+} \geq 0$, 故有
+$$
+0 \leq \underline{\int}_{E} f^{+} d x \leq \overline{\int}_{E} f^{+} d x \leq S_D=0,
+$$
+
+于是 $\underline{\int}_{E} f^{+} d x=\overline{\int_{E}} f^{+} d x=0$, 故根据定义, $f^{+}$ 在 $E$ 上可积, 且 $\int_{E} f^{+} d x=0$ 。
+
+同理可得$\int_{E} f^{-} d x=0$，所以$\int_{E} f d x=\int_{E} f^{+} d x-\int_{E} f^{-} d x=0-0=0$。
+
+2. 由1的证明可知，$f$在有界可测集$[-n, n]$上Lebesgue可积，且积分为0。剩下参看第8题第2小问。
+
+\item $\left[\textbf{证明题}\right]$ 设 $f$ 为可测集 $E$ 上的函数, $A \subset R$, 记 $\Omega$ 为 $A$ 的所有上确界不可达的有界子集组成的集合。1. 若数列 $\left\{\sigma_n\right\}$ 递增, 且 $\sigma_n \rightarrow \sigma$, 证明 $E(f \geq \sigma)=\bigcap_{n=1}^{\infty} E\left(f>\sigma_n\right)$;
+2. 若对 $\forall a \in A, E(f>a)$ 可测, 且 $R=\{\sup B \mid B \in \Omega\}$, 试证 $f$ 在 $E$ 上可测。
+
+证：1. 对于任意的 $x \in E(f \geq \sigma)$, 我们有 $f(x) \geq \sigma_0$，由于 $\left\{\sigma_n\right\}$ 是递增的并且 $\sigma_n \rightarrow \sigma$, 所以对于所有的 $n$, 我们有 $\sigma_n < \sigma \leq f(x)$, 这就意味着 $x \in E\left(f>\sigma_n\right)$ 。因此，$E(f \geq \sigma) \subseteq \bigcap_{n=1}^{\infty} E\left(f>\sigma_n\right)$ 。
+
+另一方面, 对于任意的 $x \in \bigcap_{n=1}^{\infty} E\left(f>\sigma_n\right)$, 我们有 $f(x)>\sigma_n$ 对于所有的 $n$ 。由于 $\left\{\sigma_n\right\}$ 是递增的并且 $\sigma_n \rightarrow \sigma$, 我们可以得到 $f(x) \geq \sigma$, 这就意味着 $x \in E(f \geq \sigma)$ 。因此, $\bigcap_{n=1}^{\infty} E\left(f>\sigma_n\right) \subseteq E(f \geq \sigma)$ 。综上, 我们得到 $E(f \geq \sigma)=\bigcap_{n=1}^{\infty} E\left(f>\sigma_n\right)$ 。
+
+2. 对于任意的 $a \in A$, 我们知道 $E(f>a)$ 是可测的。由于 $R=\{\sup B \mid B \in \Omega\}$, 我们可以找到一个序列 $\left\{a_n\right\}$ 属于 $A$ 使得 $a_n \rightarrow \sup B$ 。由于 $E\left(f>a_n\right)$ 是可测的并且 $a_n \rightarrow \sup B$, 我们可以得到 $E(f>\sup B)=\bigcap_{n=1}^{\infty} E\left(f>a_n\right)$ 是可测的。因此, 对于任意的 $r \in R, E(f>r)$ 是可测的, 这就意味着 $f$ 在 $E$ 上是可测的。
+
+\end{enumerate}
+
+\subsection{知识点}
+\begin{enumerate}
+    \item \textbf{判断可积的思路}：首先用$f=f^{+}-f^{-}$转化为两个非负函数的差，如果$f^{+}$和$f^{-}$均在$E$上有积分值，且不同时为$+\infty$，则$f$在$E$上有积分值。若$f^{+}$和$f^{-}$均在$E$上可积，则称$f$在$E$上可积。然后:
+
+(1). 对于有界集有界函数$f$，因为有界集有界函数可测与可积等价，可以通过判别$f$是否可测来判断是否可积。(2). 对于有界集无界函数$f$，通过截断函数转为有界函数处理，然后讨论截断函数的极限。(3). 对于无界集上的函数$f$，考虑在$[-n,n]$上是否可积（转化为有界集），然后套用(1), (2)判断是否可积，最后考察$n \to \infty$的情况。
+\end{enumerate}
+
+\section{距离空间}
+\subsection{题目}
+
+\begin{enumerate}
+    \item $\left[\textbf{选择题}\right]$ 设 $A$ 为一个至少含有 2 个实数的集合, 且存在 $\delta>0$, 使对 $\forall x, y \in A, x \neq y$,有 $|x-y| \geq \delta$ 。令 $X=\left\{\left\{x_n\right\} \mid x_n \in A\right\}$, 在 $X$ 中定义距离 $\rho\left(\left\{x_n\right\},\left\{y_n\right\}\right)=\sup _n\left|x_n-y_n\right|$, 则: \hfill [B]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    （A）$(X, \rho)$ 是可分的完备距离空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （B）$(X, \rho)$ 是不可分的完备距离空间
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    （C）$(X, \rho)$ 是不完备的可分距离空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （D）$(X, \rho)$ 是不完备的不可分距离空间
+    \end{minipage}
+
+    解析：由定义可知，$X$是一个不可数的离散距离空间，因此一定完备不可分。
+
+    \item $\left[\textbf{选择题}\right]$ 设 $X$ 与 $Y$ 是两个距离空间, $D \subset X$，$f: D \rightarrow Y$ 为 $1-1$ 的连续映射, 则下列结论正确的是：\hfill [A]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    （A）如果 $D$ 为 $X$ 可分的子空间，则 $f(D)$ 为 $Y$ 可分的子空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （B）如果 $D$ 为 $X$ 中的全有界集, 则 $f(D)$ 为 $Y$ 中的全有界集
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    （C）如果 $D$ 为 $X$ 中的致密集,则 $f(D)$ 为 $Y$ 中的致密集
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （D）如果 $D$ 为 $X$ 的完备子空间，则 $f(D)$ 为 $Y$ 的完备子空间
+    \end{minipage}
+
+    \item $\left[\textbf{选择题}\right]$ 设 $X$ 与 $Y$ 是两个赋范空间, $D \subset X$，$f: D \rightarrow Y$ 为 $1-1$ 的连续映射, 则下列结论正确的是：\hfill [A]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    （A）如果 $D$ 为 $X$ 可分的子空间，则 $f(D)$ 为 $Y$ 可分的子空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （B）如果 $D$ 为 $X$ 中的有界集, 则 $f(D)$ 为 $Y$ 中的有界集
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    （C）如果 $D$ 为 $X$ 中的致密集,则 $f(D)$ 为 $Y$ 中的致密集
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （D）如果 $D$ 为 $X$ 的完备子空间，则 $f(D)$ 为 $Y$ 的完备子空间
+    \end{minipage}
+
+    \item $\left[\textbf{选择题}\right]$ 设 $A=\left\{a_1,a_2,\cdots,a_k\right\}$为一个实数集，令$X=\left\{\left\{x_n\right\}|x_n\in A\right\}$，在$X$中定义距离 $\rho\left(\left\{x_n\right\},\left\{y_n\right\}\right)=\max _n\left|x_n-y_n\right|$，则: \hfill [A]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    （A）$(X, \rho)$ 是可分的完备距离空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （B）$(X, \rho)$ 是不可分的完备距离空间
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    （C）$(X, \rho)$ 是不完备的可分距离空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （D）$(X, \rho)$ 是不完备的不可分距离空间
+    \end{minipage}
+
+    解析：$X$是一个有限距离空间，有限距离空间一定是完备可分的。
+
+    \item $\left[\textbf{选择题}\right]$ 对$x=x\left(t\right),y=y\left(t\right)\in C_{[a,b]}$，定义
+
+    $$
+    \rho(x, y)=\left\{\begin{array}{cc}
+    1 + \max_{a\leq t\leq b}\left|x(t)-y(t)\right|, & x \neq y, \\
+    0, & x = y .
+    \end{array}\right.
+    $$
+    
+    则$(C_{[a,b]}, \rho)$是一个距离空间，且为 \hfill [B]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    （A）可分的完备的
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （B）完备的不可分的
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    （C）可分的不完备的
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （D）不完备的不可分的
+    \end{minipage}
+
+    解析：由定义$(C_{[a,b]}, \rho)$是一个不可数的离散距离空间，一定是完备不可分的。
+
+    \item $\left[\textbf{选择题}\right]$ 设 $X$ 为有理数集, 对 $x, y \in X$, 定义。
+$$
+\rho(x, y)=\left\{\begin{array}{ll}
+a, & x \neq y, \\
+0, & x=y,
+\end{array} .\right.
+$$
+
+其中 $a>0$ 为常数, 则： \hfill [A]
+
+    \begin{minipage}[t]{0.45\linewidth}
+    （A）$(X, \rho)$ 是可分的完备距离空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （B）$(X, \rho)$ 是不可分的完备距离空间
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+    （C）$(X, \rho)$ 是不完备的可分距离空间
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\linewidth}
+    （D）$(X, \rho)$ 是不完备的不可分距离空间
+    \end{minipage}
+    
+    \item $\left[\textbf{判断题}\right]$ 记有界数列全体为$X$，对$x=\left\{x_n\right\}, y=\left\{y_n\right\} \in X$，定义$\rho\left(x, y\right)=\sup _n\left|x_n-y_n\right|$，则其中的每个非空有界集都是全有界集。
+
+    答：错。$A=\left\{\left\{x_n\right\} \mid x_n \in \left\{0, 1\right\}\right\}$，显然$A$非空，$A$中任意两个不同点之间的距离均为$1$，当然在$X$中有界，由于$A$不可分，故其不是全有界集。
+
+    \item $\left[\textbf{判断题}\right]$ 设$A\subset R$为有界集，且$A$无聚点，令$X=\left\{\left\{x_n\right\}|x_n \in A \right\}$, 并在$X$中定义距离 $\rho\left(\left\{x_n\right\}, \left\{y_n\right\}\right)=\sup _n\left|x_n-y_n\right|$，则$(X, \rho)$是完备的距离空间。
+
+    答：对。因为$A$无聚点，故存在$\epsilon > 0$，使对任意的$x, y \in A$，$\left|x - y\right| \geq \epsilon$，于是可知，对任意的$\left\{x_n\right\}, \left\{y_n\right\} \in X, \left\{x_n\right\} \neq \left\{y_n\right\}$，有$\rho(\left\{x_n\right\}, \left\{y_n\right\})=\sup _n\left|x_n-y_n\right|\geq \epsilon$，即$(X, \rho)$是离散的距离空间，故其完备。
+
+    \item $\left[\textbf{判断题}\right]$ 设$X$是一个距离空间，$M\subset X$，则$M$是$X$完备子空间的充分必要条件是$M$为$X$中的闭集。
+
+    答：错。$M$为$X$中的闭集并不能推出$M$是$X$完备子空间。令$X$为$Q$，$X$上的距离是标准的欧几里得距离，则$M=\bigcap_{n=1}^{+\infty}\left\{\left|x-\sqrt{2}\right| \leq \frac{1}{n} \mid x\in Q \right\}$是$Q$中的一个闭集。但存在$M$的一个Cauchy列收敛于$\sqrt{2} \notin M$，因此$M$不是$Q$中的完备子空间。
+
+    \item $\left[\textbf{判断题}\right]$ 设$X, Y$是一个距离空间，$D\subset X$，$f$为$D$到$Y$的一个连续算子，若$D$为$X$中的闭集，则$f(D)$为$Y$中的闭集。
+
+    答：错。设$X=Y=R$，$D=\left[0, +\infty\right)$。定义$D$到$Y$的连续算子$f$为$f(x)=\frac{1}{x + 1}$。$D$是闭集，但是$f(D)=\left(0,1\right]$，不是$R$中的闭集。
+    
+    \item $\left[\textbf{判断题}\right]$ 设$X, Y$是一个距离空间，$D\subset X$，$f$为$D$到$X$的一个连续算子，若$D$为$X$中的致密集，则$f(D)$为$Y$中的致密集。
+
+    答：错。考虑$X=Y=R$，$D=(-\frac{\pi}{2}, \frac{\pi}{2})$为$X$上的有界集，$tan$为$D$到$Y$的连续算子。$tan(D)=(-\infty, +\infty)$是$Y$上的无界集。因此连续算子不保持有界性，又致密集一定是有界集，因此连续算子也不保持致密性。
+
+    \item $\left[\textbf{判断题}\right]$ 设$X$是一个距离空间，$M$为$X$中的致密集，若把$M$看作是$X$中的子距离空间，则其是一个紧空间。
+    
+    答：正确。若把$M$看作是一个距离空间，则$M$一定是闭的，且$M$为$X$中的致密集，因此$M$一定是紧空间。
+
+    \item $\left[\textbf{判断题}\right]$ 假设$F$，是$X$中的一个，$A: F \to X$是一个压缩映像，则$A$在$F$上存在唯一的不动点。
+
+    答：错误。
+    
+    \item $\left[\textbf{证明题}\right]$ 令 $X$ 表示极限为零的实数列全体, 在 $X$ 中定义距离 $\rho(x, y)=\sup _n\left|x_n-y_n\right|$,其中, $x=\left\{x_n\right\}, y=\left\{y_n\right\} \in X$ 。(1) 证明 $X$ 完备；(2) 记 $M$ 为仅有限项不为零的实数列全体, 证明 $M$ 在 $X$ 中稠；(3) 证明 $X$ 可分；(4) 令 $l=\left\{\left\{x_n\right\} \subset R\left|\sum_{n=1}^{\infty}\left| x_n \right| <+\infty \right.\right\}$, 则$l\subset X$，证明$l$不是$X$的完备子空间，并求$l$的完备化空间。
+    
+证: (1) 设 $\left\{x_k\right\}$ 为 $X$ 中的基本列, 其中 $x_k=\left\{\zeta_n^{(k)}\right\}$, 则对 $\forall \varepsilon>0, \exists K$, 当 $k, m \geq K$ 时, 有 $\rho\left(x_k, x_m\right)=\sup _n\left|\zeta_n^{(k)}-\zeta_n^{(m)}\right|<\frac{\varepsilon}{2}$, 故对每一个 $n \in N$, 均有
+
+\begin{equation*}
+\left|\zeta_n^{(k)}-\zeta_n^{(m)}\right|<\frac{\varepsilon}{2} \tag{*}
+\end{equation*}
+
+于是, 对每个固定的 $n$, $\left\{\zeta_n^{(k)}\right\}$ 为$R$中的基本列, 而$R$完备，因而收敛。设 $\zeta_n^{(k)} \rightarrow \zeta_n(k \rightarrow \infty)$, 令$x=\left\{\zeta_n\right\}$，在不等式$(*)$中，令$m\to \infty$，即知，对$\forall n\in N$，有
+$$
+\left|\zeta_n^{(k)}-\zeta_n\right| \leq \frac{\varepsilon}{2}(k \geq K) 。
+$$
+
+即当 $k \geq K$ 时, 有 $\rho\left(x_k, x\right) \leq \frac{\varepsilon}{2}<\varepsilon$, 故 $x_k \rightarrow x(k \rightarrow \infty)$ 。
+
+下面证 $x \in X$ 。由于 $\zeta_n^{(k)} \rightarrow 0(n \rightarrow \infty)$, 故 $\exists N$, 当 $n \geq N$ 时, 有 $\left|\zeta_n^{(k)}\right|<\frac{\varepsilon}{2}$, 于是有
+$$
+\left|\zeta_n\right| \leq\left|\zeta_n-\zeta_n^{(k)}\right|+\left|\zeta_n^{(k)}\right|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
+$$
+
+即 $\zeta_n \rightarrow 0(n \rightarrow \infty)$, 故 $x \in X$ ，$X$完备。
+
+(2) 对 $\forall x=\left\{x_n\right\} \in X$, 令 $z_n=\left\{x_1, x_2, \cdots, x_n, 0, \cdots\right\}, n=1,2, \cdots$, 则显然, $\left\{z_n\right\} \subset M$,且由于 $x_n \rightarrow 0$, 故 $\rho\left(z_n, x\right)=\sup _{k \geq n+1}\left|x_k\right| \rightarrow 0(n \rightarrow \infty)$, 即 $z_n \rightarrow x$, 故 $M$ 在 $X$ 中稠。
+
+(3) 令 $F=\left\{\left\{r_1, r_2, \cdots, r_n, 0, \cdots\right\} \mid r_k \in Q, n \in N\right\}$，其中，$Q$ 为有理数集，则 $F$ 可数，且对 $\forall x=\left\{x_1, \cdots, x_n, 0, \cdots\right\} \in M$， 根据有理数在实数中的稠密性，对于任意的$\epsilon$，存在$r_i \in Q, i=1,2, \cdots, n$，使得$\left|r_i - x_i\right| < \epsilon$。令 $w=\left\{r_{1}, \cdots, r_{n}, 0, \cdots\right\}$, 则 $w \in F$， 且 $\rho\left(w, x\right)=\sup _i\left|r_{i}-x_i\right| < \epsilon$ 。故 $F$ 在 $M$ 中稠，又 $M$ 在 $X$ 中稠，于是 $F$ 在 $X$ 中稠，从而 $X$ 可分。
+
+
+（也可以这样写：令 $F=\left\{\left\{r_1, r_2, \cdots, r_n, 0, \cdots\right\} \mid r_k \in Q, n \in N\right\}$，其中，$Q$ 为有理数集，则 $F$ 可数，且对 $\forall x=\left\{x_1, \cdots, x_n, 0, \cdots\right\} \in M$， 根据有理数在实数中的稠密性，存在 $r_{i k} \in Q$, $i=1,2, \cdots, n, k=1,2, \cdots$，使 $r_{ik} \rightarrow x_i(k \rightarrow \infty), i=1,2, \cdots, n$ 。令 $w_k=\left\{r_{1 k}, \cdots, r_{n k}, 0, \cdots\right\}$, 则 $\left\{w_k\right\} \subset F$， 且 $\rho\left(w_k, x\right)=\sup _i\left|r_{i k}-x_i\right| \rightarrow 0(k \rightarrow \infty)$ 。故 $F$ 在 $M$ 中稠，又 $M$ 在 $X$ 中稠，于是 $F$ 在 $X$ 中稠，从而 $X$ 可分。）
+
+
+
+(4) 只要证 $l$ 不为闭集即可。令 $x_n=\left\{1, \frac{1}{2}, \cdots, \frac{1}{n}, 0, \cdots\right\}, n=1,2, \cdots$, 则 $\left\{x_n\right\} \subset l$,令 $x=\left\{1, \frac{1}{2}, \cdots\right\}$, 显然 $x \in X$, 且 $\rho\left(x_n, x\right)=\sup_{k \geq n+1} \frac{1}{k}=\frac{1}{n+1} \rightarrow 0(n \rightarrow \infty)$, 故 $x_n \rightarrow x(n \rightarrow \infty)$，$x$为$l$的一个极限点，但 $x \notin l$。
+
+$l$ 的完备化空间为$X$，因为$M$ 在 $X$ 中稠，而$M \subset l$，因此$l$在$X$中稠。
+
+\item $\left[\textbf{证明题}\right]$ 令 $X$ 表示极限为零的实数列全体, 在 $X$ 中定义距离 $\rho(x, y)=\sup _n\left|x_n-y_n\right|$,其中, $x=\left\{x_n\right\}, y=\left\{y_n\right\} \in X$ 。(1) 证明 $X$ 完备；(2) 证明 $X$ 是可分的；(3) 令 $l=\left\{\left\{x_n\right\} \subset R\mid \sum_{n=1}^{\infty}\left| x_n \right| <+\infty \right\}$, 证明$l$不是$X$中的闭集。
+
+证：参考题13。
+
+\item $\left[\textbf{证明题}\right]$ 令 $X$ 表示极限为零的实数列全体, 在 $X$ 中定义距离 $\rho(x, y)=\sup _n\left|x_n-y_n\right|$,其中, $x=\left\{x_n\right\}, y=\left\{y_n\right\} \in X$ 。(1) 证明 $X$ 完备；(2) 证明 $X$ 是可分的；(3) 令 $l=\left\{\left\{x_n\right\} \subset R\mid \sum_{n=1}^{\infty}\left| x_n \right|^2 <+\infty \right\}$, 证明$l$不是$X$中的闭集。
+
+证：参考题13。
+
+
+\item $\left[\textbf{证明题}\right]$ 令 $Y$ 表示所有收敛的实数列全体, 对 $x=\left\{\xi_n\right\}, y=\left\{\zeta_n\right\} \in Y$, 如果 $\lim _{n \rightarrow \infty} \xi_n=\lim _{n \rightarrow \infty} \zeta_n$,
+规定 $x=y$ 。现在 $Y$ 中定义 $\rho(x, y)=\left|\lim _{n \rightarrow \infty} \xi_n-\lim _{n \rightarrow \infty} \zeta_n\right|$ 。1. 验证 $\rho$ 为 $Y$ 上的一个距
+离； (5 分) 2. 证明 $Y$ 完备且可分；(8 分) 3. 令 $X$ 表示极限为有理数的实数列全体, 问 $X$ 是不是 $Y$ 中的闭集, 证明你的结论。(5 分)
+
+解: 1. 非负性显然。规定性: 如果 $x=y$, 则 $\lim _{n \rightarrow \infty} \xi_n=\lim _{n \rightarrow \infty} \zeta_n$, 故 $\rho(x, y)=0$; 反之, 如果 $\rho(x, y)=0$, 则 $\lim _{n \rightarrow \infty} \xi_n=\lim _{n \rightarrow \infty} \zeta_n$, 故 $x=y$ 。三角不等式: 对任意的 $x=\left\{\xi_n\right\}, y=\left\{\zeta_n\right\}, z=\left\{\varsigma_n\right\} \in Y$, 显然对任意的 $n$, 有 $\left|\xi_n-\zeta_n\right| \leq\left|\xi_n-\varsigma_n\right|+\left|\zeta_n-\varsigma_n\right|$, 取极限即得, $\rho(x, y) \leq \rho(x, z)+\rho(y, z)$ 。
+
+2. 法一: 定义 $T: Y \rightarrow R,\left\{\xi_n\right\} \mapsto \lim _{n \rightarrow \infty} \xi_n$, 则对任意的 $\xi \in R$, 令 $\xi_n=\xi$, 则有, $T\left\{\xi_n\right\}=\lim _{n \rightarrow \infty} \xi_n=\xi$, 故 $T$ 是满的。又对任意的 $x=\left\{\xi_n\right\}, y=\left\{\zeta_n\right\} \in Y$, 显然有
+$$
+|T x-T y|=\left|\lim _{n \rightarrow \infty} \xi_n-\lim _{n \rightarrow \infty} \zeta_n\right|=\rho(x, y),
+$$
+
+故 $T$ 是等距的, 于是 $Y$ 与 $R$ 等距同构，由于 $R$ 完备且可分，故 $Y$ 完备且可分。
+
+法二: 设 $\left\{x_n\right\}$ 为 $Y$ 中的一个基本列, 其中 $x_n=\left\{\xi_k^{(n)}\right\}$, 则对任意的 $\varepsilon>0$, 存在 $N$,当 $n, m \geq N$ 时, 有 $\rho\left(x_n, x_m\right)=\left|\lim _{k \rightarrow \infty} \xi_k^{(n)}-\lim _{k \rightarrow \infty} \xi_k^{(m)}\right|<\varepsilon$ 。设 $\lim _{k \rightarrow \infty} \xi_k^{(n)}=\xi^{(n)}$, 令 $x=\left\{\xi^{(n)}\right\}$,则当 $n, m \geq N$ 时, 有 $\left|\xi^{(n)}-\xi^{(m)}\right|<\varepsilon$, 故 $\left\{\xi^{(n)}\right\}$ 为 $R$ 中的基本列, 而 $R$ 完备, 故 $\left\{\xi^{(n)}\right\}$ 收敛, 即 $x \in Y$ 。设 $\xi^{(n)} \rightarrow \xi$, 则 $\rho\left(x_n, x\right)=\left|\lim _{k \rightarrow \infty} \xi_k^{(n)} - \lim _{k \rightarrow \infty} \xi^{(k)}\right|=\left|\xi^{(n)}-\xi\right| \to 0$, 故 $Y$ 完备;
+
+令 $M=\{\left\{r, r, \cdots, r, \cdots \right\} \mid r \in Q, n \in N\}$，其中，$Q$ 为有理数集，则显然 $M$ 为可数集。又对任意的 $x=\left\{\xi_n\right\} \in Y$, 记 $\xi=\lim _{n \rightarrow \infty}{\xi_n}$。由于有理数在实数中稠密，故对任意的$\epsilon > 0$，存在$r \in Q$，使得$\left|r - \xi \right| < \epsilon$，令 $w=\left\{r, r, \cdots, r, \cdots\right\}$, 则 $w \in M$，且 $\rho\left(w, x\right)=\left|r - \xi\right| < \epsilon$ 。故$M$ 在 $Y$ 中稠，从而 $Y$ 可分。
+
+（这种写法也可以：令 $M=\{\left\{r, r, \cdots, r, \cdots \right\} \mid r \in Q, n \in N\}$，其中，$Q$ 为有理数集，则显然 $M$ 为可数集。又对任意的 $x=\left\{\xi_n\right\} \in Y$, 记 $\xi=\lim _{n \rightarrow \infty}{\xi_n}$。由于有理数在实数中稠密，故存在$\left\{r_k\right\}, r_{k} \in Q$, 使 $r_{k} \rightarrow \xi(k \rightarrow \infty)$ 。令 $w^{(k)}=\left\{r_{k}, r_{k}, \cdots, r_{k}, \cdots\right\}$, 则 $\left\{w^{(k)}\right\} \subset M$，且 $\rho\left(w^{(k)}, x\right)=\left|\lim _{n \rightarrow \infty} w_{n}^{(k)} - \lim _{n \rightarrow \infty} \xi_n\right|=\left|r_{k} - \xi\right| \to 0 \left(k \to \infty \right)$ 。故$M$ 在 $Y$ 中稠，从而 $Y$ 可分。）
+
+3. 法一：根据2中法一的结论可知，$Y$与$R$等距同构，由于有理数集不是$R$中的闭集，故$X$不是$Y$中的闭集。
+
+法二：令$x_n = \left\{\sqrt{2} - \frac{1}{n}, \sqrt{2} - \frac{1}{n}, \cdots, \sqrt{2} - \frac{1}{n}, \cdots \right\}, n = 1, 2, \cdots$，则$\left\{x_n\right\} \subset X$，令$x = \left\{\sqrt{2}, \sqrt{2}, \cdots, \sqrt{2}, \cdots \right\}$，显然$x \in Y$，且$\rho(x_n, x) = \left| \sqrt{2} - \frac{1}{n} - \sqrt{2}\right| = \frac{1}{n} \to 0 (n \to \infty)$，故$x_n \to x (n \to \infty)$，$x$为$X$的一个极限点，但$x \notin X$，因此$X$不是闭集。
+
+\item $\left[\textbf{证明题}\right]$ 令 $X=\left\{\left\{x_n\right\} \subset R\left|\sum_{n=1}^{\infty}\left| x_n \right|^2 <+\infty \right.\right\}$，对$x=\left\{x_n\right\},y=\left\{y_n\right\} \in X$，定义距离
+
+$$
+\rho\left(x, y\right)=\sqrt{\sum_{n=1}^{\infty}{\left|x_n-y_n\right|}^2}
+$$
+
+1.证明$X$完备；2.证明$X$可分；3.令$M$为所有仅有限项不为零的实数列全体，试问$M$是不是$X$中的闭集。证明你的结论。
+
+证明：1. 设$\left\{x_n\right\}$为$X$中的一个Cauchy列，其中$x_n=\left\{\xi_k^{(n)}\right\}$，则对任意的$\epsilon > 0$，存在$N$，当$n, m \geq N$时，有
+
+\begin{equation*}
+    \rho(x_n, x_m) = \sqrt{\sum_{k=1}^{\infty}{\left| \xi_{k}^{(n)} - \xi_{k}^{(m)} \right|}^2 } < \epsilon \tag{*}    
+\end{equation*}
+
+则对任意固定$k$，都有$\left| \xi_{k}^{(n)} - \xi_{k}^{(m)} \right| < \epsilon$。也即$\left\{\xi_k^{(n)}\right\}$为$R$中的基本列，而$R$完备，因而$\left\{\xi_k^{(n)}\right\}$收敛, 存在$\xi_k$，使得$\xi_k^{(n)} \to \xi_k(n \to \infty)$。令$x=\left\{\xi_k\right\} \in X$，在不等式$(*)$中，令$m\to \infty$，有$\rho(x_n, x) < \epsilon (n \geq N)$，故$x_n \to x (n \to \infty)$，所以$X$完备。
+
+2. 取 $E_0=\left\{\left(r_1, r_2, \cdots, r_n, 0, \cdots, 0, \cdots\right) \mid r_i \in Q, n \in N\right\} \subset X$，显然 $E_0$ 等价于 $\bigcup_{n=1}^{\infty} Q^n$，可知 $E_0$ 可数，下面证 $E_0$ 在 $X$ 中稠密。
+
+$\forall x=\left(x_1, x_2, \cdots, x_n, \cdots\right) \in X$，有 $\sum_{i=1}^{\infty}\left|x_i\right|^2<+\infty$，因此 $\forall \epsilon>0, \exists N \in N$，当 $n>N$ 时，
+$$
+\sum_{n=N+1}^{\infty}\left|x_i\right|^2<\frac{\epsilon^2}{2}
+$$
+
+又因 $Q$ 在 $R$ 中稠密，对每个 $x_i(1 \leq i \leq N)$, 存在 $r_i \in Q$，使得
+$$
+\left|x_i-r_i\right|^2<\frac{\epsilon^2}{2 N}, \quad(i=1,2,3, \cdots, N)
+$$
+
+于是得
+$$
+\sum_{i=1}^N\left|x_i-r_i\right|^2<\frac{\epsilon^2}{2}
+$$
+
+令 $x_0=\left(r_1, r_2, \cdots, r_N, 0, \cdots, 0, \cdots\right) \in E_0$，则
+$$
+\rho \left(x_0, x\right)=\sqrt{\sum_{i=1}^N\left|x_i-r_i\right|^2+\sum_{i=N+1}^{\infty}\left|x_{i}\right|^2}<\sqrt{\frac{\epsilon ^ 2}{2} + \frac{\epsilon ^ 2}{2}}=\epsilon
+$$
+
+因此$E_0$为$X$的一个可数稠子集，$X$可分。
+
+3. 取$x_n = \left\{1, \frac{1}{2}, \cdots, \frac{1}{n}, 0, \cdots \right\} \in M$，则有$\left\{x_n\right\} \to x = \left\{1, \frac{1}{2}, \cdots, \frac{1}{n}, \cdots \right\} \notin M$，故$M$不是$X$中的闭集。
+
+\item $\left[\textbf{证明题}\right]$ 令 $X=\left\{\left\{x_n\right\} \subset R\left|\sum_{n=1}^{\infty}\left| x_n \right|^2 <+\infty \right.\right\}$，对$x=\left\{x_n\right\},y=\left\{y_n\right\} \in X$，定义距离
+
+$$
+\rho\left(x, y\right)=\sqrt{\sum_{n=1}^{\infty}{\left|x_n-y_n\right|}^2}
+$$
+
+1.证明$X$完备；2.证明$X$可分；3.令$M$为只有有限项不为零的实数列全体，证明$M$不是$X$中的完备子空间，并求$M$的完备化空间。
+
+证：
+1. 同17题。
+
+2. 同17题。
+
+3. 见17题，因为$M$不是$X$中的闭集，因此$M$也不是$X$的完备子空间。
+
+$M$ 的完备化空间为$X$，因为$M$是$X$中的稠子集。
+
+下面证明$M$在$X$中稠，给定$x=\left\{x_n\right\} \in X$。因为$\sum_{n=1}^{\infty}\left| x_n \right|^2 <+\infty$，所以对于任意$\epsilon > 0$，存在$N$，使得当$n \geq N$时，有
+$$
+\sqrt{\sum_{k=n+1}^{\infty}\left|x_k\right|^2} < \epsilon, 
+$$
+
+则令$m = \left\{x_1, x_2, \cdots, x_n, 0, 0, \cdots, 0, \cdots \right\} \in M$，有
+$$
+\rho\left(x, m\right)=\sqrt{\sum_{k=n+1}^{\infty}{\left|x_k\right|}^2} < \epsilon .
+$$
+
+因此，$M$在$X$中稠。
+
+\item $\left[\textbf{证明题}\right]$ 令 $X$ 表示极限为零的实数列全体, 对$x=\left\{x_n\right\} \in X$，定义范数
+
+$$
+\Vert x\Vert = \sup_n \left| x_n \right|
+$$
+
+1. 记$M$为只有有限项不为零的实数列全体，证明$M$在$X$中稠密；2.证明$X$可分；3.证明$X$完备；4.令 $l=\left\{\left\{x_n\right\} \subset R\mid \sum_{n=1}^{\infty}\left| x_n \right|^2 <+\infty \right\}$, 则$l\subset X$，试问$l$是否为$X$中的完备子空间，证明你的结论。
+
+证：对于线性赋范空间$X$，按照距离$\rho(x, y) = \Vert x - y\Vert = \sup_n \left| x_n - y_n \right|$成为距离空间。剩下的参考13题。
+
+\item $\left[\textbf{证明题}\right]$ 令 $X$ 表示仅有限项不为零的实数列全体，对 $x=\left\{x_n\right\}, y=\left\{y_n\right\} \in X$，定义距离 $\rho(x, y)=\max _n\left|x_n-y_n\right|$ 。 1. 证明 $X$ 不完备； 2. 证明 $X$ 可分； 3. 给出 $X$ 的完备化空间 $Y$，证明 $Y$ 完备且 $X$ 在 $Y$ 中稠密。
+
+证：1. 令$x_n = \left\{1, \frac{1}{2}, \cdots, \frac{1}{n}, 0, 0, \cdots\right\}$，则对于任意$\epsilon > 0$，存在$N, \frac{1}{N} < \epsilon$，当$n, m > N$，有$\rho(x_n, x_m) < \epsilon$。因此${x_n}$是一个Cauchy序列，但是${x_n}$收敛到$x = \left\{1, \frac{1}{2}, \cdots, \frac{1}{n}, \cdots \right\} \notin X$，因此$X$不完备。
+
+2. 用仅有限项不为零的有理数列全体作为可数稠子集。
+
+3. $X$的完备化空间$Y$为极限为零的实数列全体。Y完备：见13题1小问。X在Y中稠密：见13题2小问。
+
+\end{enumerate}
+
+\subsection{知识点}
+\begin{enumerate}
+
+\item 离散距离空间是完备的：给定一个离散距离空间中的Cauchy序列 $\left\{A_n\right\}$，对于任意的 $\epsilon > 0$，存在一个正整数 $k$，使得当 $n, m > k$ 时，我们有 $|A_n - A_m| < \epsilon$。由于是离散距离空间，这意味着只有当 $A_n = A_m$ 时，$|A_n - A_m|$ 才能小于任意小的$\epsilon$。因此，对于所有的 $n, m > k$，我们有 $A_n = A_m$。从某一点开始，序列$\left\{A_n\right\}$的所有项都相等。我们可以说序列 $\left\{A_n\right\}$ 收敛于 $A_k$，因为对于所有的 $n > k, A_n = A_k$。
+
+\item 不可数的离散距离空间不可分（例3.2.4）。
+
+\item 距离空间上的连续映射可以保持可分性
+
+连续映射：在数学中，连续映射是一种在拓扑空间中保持连续性的函数。在度量空间或者距离空间中，连续映射可以被定义为对于任意的 $\epsilon > 0$，存在 $\delta > 0$ 使得当 $d(x, y) < \delta$ 时，有 $d(f(x), f(y)) < \epsilon$。
+
+证明：
+假设我们有一个可分的距离空间 $(X, d_X)$，和一个距离空间 $(Y, d_Y)$，以及一个从 $X$ 到 $Y$ 的连续映射 $f$。我们需要证明的是，$f(X)$ 是 $Y$ 的一个可分子集。
+
+由于 $X$ 是可分的，所以存在一个可数的子集 $D$，使得 $D$ 在 $X$ 中是稠密的。我们需要证明 $f(D)$ 在 $Y$ 中是稠密的。为了证明这一点，我们需要证明对于任意的 $y \in Y$ 和任意的 $\epsilon > 0$，存在一个 $d \in D$，使得 $d_Y(f(d), y) < \epsilon$。
+
+由于 $f$ 是连续的，所以对于任意的 $y \in Y$ 和任意的 $\epsilon > 0$，存在一个 $\delta > 0$，使得当 $d_X(x, f^{-1}(y)) < \delta$ 时，有 $d_Y(f(x), y) < \epsilon$。由于 $D$ 在 $X$ 中是稠密的，所以存在一个 $d \in D$，使得 $d_X(d, f^{-1}(y)) < \delta$。因此，$d_Y(f(d), y) < \epsilon$。
+
+所以，我们证明了 $f(D)$ 在 $Y$ 中是稠密的，因此 $f(X)$ 是 $Y$ 的一个可分子集。这就证明了距离空间上的连续映射可以保持可分性。
+\item 距离空间上的连续映射不保持完备性\\
+设$D$为X的完备子空间，我们证明$f(D)$不一定是$Y$的完备子空间。
+
+证明：
+
+为了证明这个结论，我们可以构造一个反例。假设我们有两个距离空间$X$和$Y$，其中$X$是实数集合，$Y$是$(0,1)$区间，距离函数分别是标准的欧几里得距离。定义映射$f:X->Y, f(x)=1/(1+e^{-x})$。这是一个连续的、1-1的映射。
+
+我们取$X$的子空间$D$为整数集合$Z$，它是完备的，因为任何$Z$中的Cauchy序列都收敛到$Z$中的一个元素。然而，$f(D)$是$(0,1)$区间中的一个离散集合，存在$f(D)$中的Cauchy序列，其极限点不在$f(D)$中。考虑序列$\{x_n\}$，其中$x_n = -n$, $\{f(x_n)\}$为一个$f(D)$中的Cauchy序列，但是并不是收敛列，因为该序列的极限为0，而0不在$f(D)$中，因此$f(D)$不是完备的。
+
+\item 距离空间上的连续映射不保持有界性
+
+证明：考虑$(-\frac{\pi}{2}, \frac{\pi}{2})$到$R$的一个连续映射$tan(x)$，则显然不保持有界性。
+
+\item $(0, 1)$是一个全有界集
+
+证明：对于任意正实数$\epsilon$，存在正整数$N$，使得$\frac{1}{N} < \epsilon$。令$x_i=\frac{i}{N}, i=1,2,\dots,N$，则$\left\{x_i\right\}$构成$(0, 1)$的一个有限$\epsilon-$子网
+
+\item 全有界集 $\Rightarrow$ 可分
+
+\item 致密集 $\Rightarrow$ 全有界集 $\Rightarrow$ 有界集
+
+\item 在$R^n$中，致密集 $\Leftrightarrow$ 全有界集 $\Leftrightarrow$ 有界集
+
+\item $Q$不是$R$中的一个闭集，当然$Q$也不是$R$中的一个完备子空间
+
+\item $L^p$空间，$p$次可积的函数构成的空间，$p$越大元素越少，$若1\leq q\leq p, L^p \subset L^q$，$L^{\infty} \subset L^p$（p50）。
+
+\item $l^p$空间，$p$次可和的序列构成的空间，$p$越大元素越多，$若1\leq q\leq p, l^q \subset l^p$，$l^p \subset l^{\infty}$（p61）。
+
+\item 在拓扑空间中，全集和空集同时是开集也是闭集。因此距离空间总是闭集，如果距离空间是致密集，则也是紧集。
+
+\end{enumerate}
+
+\section{有界线性算子}
+\subsection{题目}
+
+\begin{enumerate}
+    \item $\left[\textbf{选择题}\right]$ 下列哪些条件是结论 “线性赋范空间 $X$ 为有限维” 的充分条件: (1) $X$ 中的单位球而 $\{x \in X\mid \Vert x\Vert=1\}$ 是全有界集：(2) $X$ 中的单位球面 $\{x \in X\mid \Vert x\Vert=1\}$ 是致密集：（3） $X$ 中的每个有界集都是全有界集。\hfill [A]
+    
+        \begin{minipage}[t]{0.45\linewidth}
+        （A）3 个都是
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （B）3 个都不是
+        \end{minipage}
+        \begin{minipage}[t]{0.45\linewidth}
+        （C）(2)与(3)是, (1)不是
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （D）(3)是, (1)与 (2)不是
+        \end{minipage}
+    
+    \item $\left[\textbf{判断题}\right]$ 设$X$与$Y$为两个赋范空间，$T$为$X$到$Y$的一个线性算子，若对$\forall x \in X$，均有$\Vert Tx \Vert=\Vert x \Vert$，则$X$与$TX$同构。
+
+    答：正确。$T$是保范的，且$T$是$X$到$TX$的1-1映射，因此$T$是$X$到$TX$的一个线性等距映射，$X$与$TX$保范线性同构。
+
+    \item $\left[\textbf{判断题}\right]$ 设$X$为一个线性赋范空间，如果$X$中的单位球面$\left\{x\in X \mid \Vert x \Vert = 1 \right\}$是一个全有界集，则$X$为一个有限维空间。
+
+    答：正确。
+
+    \item $\left[\textbf{判断题}\right]$ 设$X$是一个Banach空间，$D\subset X$，$T$为$D$到$X$的一个线性算子，若对任意的$\left\{x_n\right\} \subset D$，$x_n \to x$，$Tx_n\to y$，有$x\in D$，且$y=Tx$，如果$T$无界，则$D$一定不是$X$中的闭集。
+
+    答：正确。根据习题4.13可知，$T$为闭算子，如果$D$为$X$中的闭集，由于$X$为$Banach$空间，故$D$也为$Banach$空间，于是根据闭图像定理，$T$有界，矛盾。
+    
+    \item $\left[\textbf{判断题}\right]$ 设$X$是一个Banach空间，$D\subset X$，$T$为$D$到$X$的一个无界线性算子，若对任意的$\left\{x_n\right\} \subset D$，$x_n \to x$，$Tx_n\to y$，均有$x\in D$，且$y=Tx$，则$D$一定不是$X$中的闭集。
+
+    答：正确。同4题。
+
+    \item $\left[\textbf{判断题}\right]$ 设 $x_1, x_2, \cdots, x_n$ 是实数域 $R$ 上的线性赋范空间 $X$ 中的一个线性无关组，记 $M=\left\{\left(\zeta_1, \zeta_2, \cdots, \zeta_n\right) \in R^n \mid \sum_{k=1}^n\left| \zeta_k\right|^2=1\right\}$，定义函数 $f\left(\zeta_1, \zeta_2, \cdots, \zeta_n\right)=\left\|\sum_{k=1}^n \zeta_k x_k\right\|$，则 $f$在 $M$ 上能取到最小值 $a$， 且 $a>0$。
+
+    答：正确。因为$x_1, x_2, \cdots, x_n$是一个线性无关组，对于任意不全为$0$的实数组$\left(\zeta_1, \zeta_2, \cdots, \zeta_n\right)$，$\sum_{k=1}^n \zeta_k x_k$不为零。又对于范数$\Vert x \Vert = 0 \Leftrightarrow x = 0$，因此函数$f\left(\zeta_1, \zeta_2, \cdots, \zeta_n\right)=\left\|\sum_{k=1}^n \zeta_k x_k\right\|$总是大于0。另一方面，由于 $M$ 是一个紧集 (闭且有界)，而 $f$ 是一个实连续函数，$f$ 在 $M$ 上一定能取到最小值。因此, 存在一个最小值 $a$, 且$a > 0$。
+
+    \item $\left[\textbf{判断题}\right]$ 设 $X$ 为闭区间 $[a, b]$ 上所有连续可微函数构成的集合, 在 $X$ 中定义范数 $\|x\|=\max _{a \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\}$, 则 $S=\{x \in X \mid \|x\|=1\}$ 一定不是紧集。
+
+    答：正确。（下面的证明不确定）考虑函数列$sin(nt)$，我们能找到$n$使得$\Vert sin(nt) \Vert = 1$，但是$\Vert sin(nt) - sin(mt)\Vert = \max_{a\leq t \leq n}\left\{|sin(nt) - sin(mt)|, |ncos(nt) - mcos(mt)| \right\} = \max_{a\leq t \leq n}\left\{|2sin(\frac{n-m}{2}t)cos(\frac{n+m}{2}t)|, |ncos(nt) - mcos(mt)| \right\} \geq 2$，即不存在收敛子列。
+
+    \item $\left[\textbf{判断题}\right]$ 给定赋范空间$X$上的两个范数$\Vert \cdot \Vert_1$和$\Vert \cdot \Vert_2$，有单位算子$A:(X,\Vert\cdot \Vert_1) \to (X,\Vert\cdot \Vert_2)$连续，则$\Vert \cdot \Vert_1$比$\Vert \cdot \Vert_2$强。
+
+    答：正确。单位算子$A$是连续的线性算子，因而$A$有界。存在$M > 0$，使得$\Vert Ax\Vert_2=\Vert x \Vert_2 \leq M \Vert x \Vert_1$，因此$\Vert \cdot \Vert_1$比$\Vert \cdot \Vert_2$强。
+    
+    \item $\left[\textbf{证明题}\right]$ 在复线性赋范空间 $l^1$ 中, 对每个自然数 $n$, 定义算子
+$$
+A_n\left\{\xi_1, \xi_2, \cdots, \xi_n, \cdots\right\}=\left\{\xi_1, \xi_2, \cdots, \xi_{n-1}, \xi_{n+1}, \cdots\right\},\left\{\xi_n\right\} \in l^1 。
+$$
+
+证明: (1) 对每个自然数 $n$，有 $A_n \in B\left(l^1 \rightarrow l^1\right)$ : (2) $\lim _{n \rightarrow \infty}\left\|A_n\right\|=1$ ： (3) 如果 $|\lambda|>1$,则 $\lambda$ 为 $A_n$ 的正则值，如果 $|\lambda|<1$，则 $\lambda$ 为 $A_n$ 的特征值。
+
+证: （1）对于$\forall \xi, \zeta \in l^1$，有
+
+\begin{equation*}
+    \begin{aligned}
+        A_n(\alpha \xi + \beta \zeta) &= A_n\left\{\alpha \xi_1 + \beta \zeta_1, \alpha \xi_2 + \beta \zeta_2, \cdots, \alpha \xi_{n} + \beta \zeta_{n}, \cdots\right\}\\
+        &= \left\{\alpha \xi_1 + \beta \zeta_1, \alpha \xi_2 + \beta \zeta_2, \cdots, \alpha \xi_{n-1} + \beta \zeta_{n-1}, \alpha \xi_{n+1} + \beta \zeta_{n+1}, \cdots\right\}\\
+        &=\alpha\left\{\xi_1, \xi_2, \cdots, \xi_{n-1}, \xi_{n+1}, \cdots\right\} + \beta\left\{\zeta_1, \zeta_2, \cdots, \zeta_{n-1}, \zeta_{n+1}, \cdots\right\}\\
+        &=\alpha A_n(\xi) + \beta A_n(\zeta)
+    \end{aligned}
+\end{equation*}
+
+则$A_n$为线性算子。
+
+对于$l^{1}$的任意元素$\xi$，有$\Vert A_n\xi \Vert = \sum_{k\neq n}\left| \xi_k \right| < \sum_{k=1}^{\infty}\left| \xi_n \right| = \Vert \xi \Vert < + \infty, n = 1, 2, \cdots$，因此$A_n \in B\left(l^1 \rightarrow l^1\right), n = 1, 2, \cdots$。
+
+(2) 由（1），对 $\forall \xi \in l^{1}, n \in N$, 有$\Vert A_n\xi \Vert \leq \Vert \xi \Vert$，故有，$\left\|A_n\right\| = \sup_{\Vert \xi \Vert \neq 0} \frac{\Vert A_n \xi \Vert}{\Vert \xi \Vert} \leq 1$ 。 又若令 $e_n=\{\overbrace{0, \cdots, 0}^{n-1}, 1,0, \cdots\}, n=1,2, \cdots$，则 $\left\|e_n\right\|=1$， 且 $A_n e_{n+1}=e_n$，故有，$\left\|A_n\right\| \geq \frac{\left\|A_n e_{n+1}\right\|}{\Vert e_{n+1} \Vert}=1$。于是，$\left\|A_n\right\|=1$。故 $\lim _{n \rightarrow \infty}\left\|A_n\right\|=1$。
+
+(3) 根据定理 4.6.1 可知，当 $|\lambda|>1=\left\|A_n\right\|$ 时，$\lambda$ 为 $A_n$ 的正则值。由于 $A_n$ 不是 $1-1$ 的，故 $\lambda=0$ 为 $A_n$ 的特征值，而当 $|\lambda|<1$，且 $\lambda \neq 0$ 时，令 $x_n=\{\overbrace{0, \cdots, 0}^{n-1}, \lambda, \lambda^2, \cdots\}$，则 $x_n \in l^{1}, x_n \neq \theta$，且 $\left(A_n-\lambda I\right) x_n=\theta, n=1,2, \cdots$，即方程 $\left(A_n-\lambda I\right) x=\theta$ 有非零解，故 $\lambda$ 为 $A_n$ 的特征值。
+
+    \item $\left[\textbf{证明题}\right]$ 记 $C_{[a, b]}^1$ 表示闭区间 $[a, b]$ 上连续可微的实函数全体, 试证明: 1. $C_{[a, b]}^1$ 作为 $C_{[a, b]}$的子空间是不完备的； 2. 如果在 $C_{(n, b)}^1$ 中定义范数 $\|x\|=\max _{\alpha \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\}$, 则微分算子 $T=\frac{d}{d t}$ 是 $C_{[a, b]}^1$ 到 $C_{[a, b]}$ 的连续算子； 3. 如果 $C_{[a, b]}^1$ 按照 2 中的范数, 则 $\|T\|=1$。
+
+    证明：
+    
+    1. 考虑在 $[a, b]$ 上的函数序列 $\left\{f_n\right\}$，其中 $f_n(x)=\sqrt{x^2+\frac{1}{n}}$ 。每个 $f_n$ 都在 $[a, b]$ 上连续可微，因此 $f_n \in C_{[a, b]}^1$ 。然而，当 $n \rightarrow \infty$ 时，$f_n$ 在 $C_{[a, b]}$ 中收敛到 $f(x)=|x|$，而 $f$ 在 $x=0$ 处不可微。因此$C_{[a, b]}^1$不是$C_{[a, b]}$中的闭集，而$C_{[a, b]}$完备，因此$C_{[a, b]}^1$ 作为 $C_{[a, b]}$的子空间是不完备的。
+    
+2. 对于任意 $f \in C_{[a, b]}^1$, 我们有
+$$
+\|T f\|_{C_{[a, b]}}=\max _{a \leq t \leq b}\left|f^{\prime}(t)\right| \leq \max _{a \leq t \leq b}\left\{|f(t)|,\left|f^{\prime}(t)\right|\right\}=\|f\|_{C_{[a, b]}^1},
+$$
+
+所以 $\|T f\|_{C_{[a, b]}} \leq\|f\|_{C_{[a, b]}^1}$, 这说明 $T$ 有界，因而连续。
+
+3. 由第2小问的结论, 我们有
+$$
+\|T\|=\sup _{f \neq 0} \frac{\|T f\|_{C_{[a, b]}}}{\|f\|_{C_{[a, b]}^1}} \leq 1,
+$$
+
+考虑函数 $f_0(t)=e^t$，我们有 $f_0^{\prime}(t)=e^t$，所以 $\|f_0\|=\max _{a \leq t \leq b}\{|e^t|,|e^t|\}=\max _{a \leq t \leq b}\{|e^t|\}$，且 $\|T f_0\|=\max _{a \leq t \leq b}\{|e^t|\}$，有$\Vert T \Vert = \sup_{\Vert f \Vert \neq 0}\frac{\Vert Tf \Vert}{\Vert f \Vert} \geq \frac{\Vert Tf_0 \Vert}{\Vert f_0 \Vert} = 1$。因此，我们有 $\|T\|=1$ 。所以，当 $0 \leq a<b \leq 1$ 时，$\|T\|=1$ 。
+
+% 另一方面，考虑函数 $f(x)=\frac{1}{2} x^2$, 我们有 $\|f\|_{C_{[a, b]}^1}=\max _{a \leq t \leq b}\left\{\left|\frac{1}{2} t^2\right|,|t|\right\}$, 而 $\|T f\|_{C_{[a, b]}}=\max _{a \leq t \leq b}|t|$,所以
+% $$
+% \frac{\|T f\|_{C_{[a, b]}}}{\|f\|_{C_{[a, b]}^1}}=1,
+% $$
+
+% 这说明 $\|T\| \geq 1$ 。因此, 我们得到 y
+
+    \item $\left[\textbf{证明题}\right]$ 记 $C_{[a, b]}^1$ 表示闭区间 $[a, b]$ 上连续可微的实函数全体, 对任意的$x \in C_{[a, b]}^1$，定义
+
+    $$
+    \|x\|=\max _{\alpha \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\}
+    $$
+    
+    1. 验证$\Vert \cdot \Vert$为$C_{[a, b]}^1$上的一个范数；2. 证明微分算子 $T=\frac{d}{d t}$ 是 $C_{[a, b]}^1$ 到 $C_{[a, b]}$ 的有界线性算子； 3. 若$0\leq a < b \leq 1$，求$\Vert T \Vert$。 
+
+    证：1. 非负性: 对于任意 $x \in C_{[a, b]}^1$, 我们有 $\|x\|=\max _{a \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\} \geq 0$。规定性：$\|x\|=0 \Rightarrow \max _{a \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\}=0 \Rightarrow x(t)=0, x^{\prime}(t)=0, a \leq t \leq b $，因此$x$为零函数。当$x$为零函数时，显然有$\Vert x \Vert = 0$，则规定性成立。
+    正齐性: 对于任意 $x \in C_{[a, b]}^1$ 和任意实数 $\lambda$, 我们有
+$$
+\|\lambda x\|=\max _{a \leq t \leq b}\left\{|\lambda x(t)|,\left|\lambda x^{\prime}(t)\right|\right\}=|\lambda| \max _{a \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\}=|\lambda|\|x\|_{\circ}
+$$
+
+次可加性 : 对于任意 $x, y \in C_{[a, b]}^1$, 我们有
+
+\begin{equation*}
+    \begin{aligned}
+        \|x+y\|&=\max _{a \leq t \leq b}\left\{|x(t)+y(t)|,\left|x^{\prime}(t)+y^{\prime}(t)\right|\right\} \leq \max _{a \leq t \leq b}\left\{|x(t)|+|y(t)|,\left|x^{\prime}(t)\right|+\left|y^{\prime}(t)\right|\right\} \\
+        &\leq \max _{a \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\}+\max _{a \leq t \leq b}\left\{|y(t)|,\left|y^{\prime}(t)\right|\right\}=\|x\|+\|y\|
+    \end{aligned}
+\end{equation*}
+
+2. 线性 : 对于任意 $x, y \in C_{[a, b]}^1$ 和任意实数 $\lambda, \mu$, 我们有
+$$
+T(\lambda x+\mu y)=\frac{d}{d t}(\lambda x(t)+\mu y(t))=\lambda \frac{d}{d t} x(t)+\mu \frac{d}{d t} y(t)=\lambda T(x)+\mu T(y),
+$$
+
+因此$T$是线性算子。
+
+有界 : 对于任意 $x \in C_{[a, b]}^1$, 我们有 $\|T x\|=\max _{a \leq t \leq b}\left\{\left|x^{\prime}(t)\right|\right\} \leq \max _{a \leq t \leq b}\left\{|x(t)|,\left|x^{\prime}(t)\right|\right\}=\|x\|$,
+所以 $T$ 是有界的，且 $\|T\| \leq 1$。
+
+3. 由第2小问，已知$\|T\| \leq 1$ 。考虑函数 $x_0(t)=t$，我们有 $x_0^{\prime}(t)=1$，所以 $\|x_0\|=\max _{a \leq t \leq b}\{|t|,|1|\}=1$，且 $\|T x_0\|=\max _{a \leq t \leq b}\{|1|\}=1$，有$\Vert T \Vert = \sup_{\Vert x \Vert \neq 0}\frac{\Vert Tx \Vert}{\Vert x \Vert} \geq \frac{\Vert Tx_0 \Vert}{\Vert x_0 \Vert} = 1$。因此，我们有 $\|T\|=1$ 。所以，当 $0 \leq a<b \leq 1$ 时，$\|T\|=1$ 。
+
+    \item $\left[\textbf{证明题}\right]$ $L_{[a, b]}^{\infty}$表示闭区间$[a, b]$上的所有本性有界可测函数全体，按照函数的通常加法与数乘构成一个线性空间，规定几乎处处相等的函数为同一个元素，定义
+
+    $$
+    \rho(x_1, x_2)=\inf_{E\in \Sigma}\left(\sup_{[a, b]-E}\left|x_1(t) - x_2(t) \right|\right), x_1, x_2 \in L_{[a, b]}^{\infty}
+    $$
+
+    其中，$\Sigma=\left\{E\subset [a, b] \mid m(E)=0 \right\}$为$[a, b]$中的零测集全体。1.验证$\rho$为$L_{[a, b]}^{\infty}$上的一个距离；2.设$\left\{x_n\right\}$为$L_{[a, b]}^{\infty}$中的一个点列，$x\in L_{[a, b]}^{\infty}$，证明$\left\{x_n\right\}$在$L_{[a, b]}^{\infty}$中收敛到$x$的充分必要条件是函数列$\left\{x_n(t)\right\}$在$[a, b]$上几乎处处一致收敛到$x(t)$；3.设$\left\{x_n\right\}$为$L_{[a, b]}^{\infty}$中的一个基本列，证明$\left\{x_n\right\}$在$L_{[a, b]}^{\infty}$中收敛。
+
+    % 证：1. 非负性与正规性：因为$\left|x_1(t) - x_2(t)\right| \geq 0$，因此$\rho(x_1, x_2) \geq 0$，非负性得证。如果$\rho(x_1, x_2)=0$，则存在$E_0 \in \Sigma$，使得$\sup_{[a, b]-E_0}\left|x_1(t) - x_2(t) \right| = 0$，则说明$x_1(t)$和$x_2(t)$几乎处处相等，$x_1 = x_2$。如果$x_1 = x_2$，则显然有$\rho(x_1, x_2)=0$，正规性得正。
+    % 三角不等式：
+    % \begin{equation*}
+    %     \begin{aligned}
+    %         \rho(x_1, x_2) = \inf_{E\in \Sigma}\left(\sup_{[a, b]-E}\left|x_1(t) - x_2(t) \right|\right) &= \inf_{E\in \Sigma}\left(\sup_{[a, b]-E}\left|x_1(t) - x_3(t) + x_3(t) - x_2(t) \right|\right) \\
+    %         &\leq \inf_{E\in \Sigma}\left(\sup_{[a, b]-E}\left|x_1(t) - x_3(t)\right| + \left|x_3(t) - x_2(t) \right|\right) \\
+    %         &\leq \inf_{E\in \Sigma}\left(\sup_{[a, b]-E}\left|x_1(t) - x_3(t)\right| + \sup_{[a, b]-E}\left|x_3(t) - x_2(t) \right|\right) \\
+    %         &= \rho(x_1, x_3) + \rho(x_3, x_2)
+    %     \end{aligned}
+    % \end{equation*}
+    
+    \item $\left[\textbf{证明题}\right]$ 在线性赋范空间 $l^{\infty}$ 中, 对每个自然数 $n$, 定义算子
+$$
+A_n\left\{\xi_1, \xi_2, \cdots\right\}=\left\{\xi_{n+1}, \xi_{n+2}, \cdots\right\},\left\{\xi_n\right\} \in l^{\infty} 。
+$$
+
+又令$M=\left\{\left\{\xi_n\right\} \subset R\mid \sum_{n=1}^{\infty}\left| \xi_n \right|^p <+\infty \right\}(p > 1)$，则$M\subset l^{\infty}$。1.证明$A_n \in B\left(l^{\infty} \rightarrow l^{\infty}\right)$；2. 证明$\lim _{n \rightarrow \infty}\left\|A_n\right\|=1$；3.问$M$是否为$l^{\infty}$的完备子空间，证明你的结论。
+
+1. 对于$\forall \xi, \zeta \in l^{\infty}$，有
+
+\begin{equation*}
+    \begin{aligned}
+        A_n(\alpha \xi + \beta \zeta) &= A_n\left\{\alpha \xi_{1} + \beta \zeta_{1}, \alpha \xi_{2} + \beta \zeta_{2},\cdots\right\}\\
+        &= \left\{\alpha \xi_{n+1} + \beta \zeta_{n+1}, \alpha \xi_{n+2} + \beta \zeta_{n+2},\cdots\right\}\\
+        &=\alpha\left\{\xi_{n+1}, \xi_{n+2}, \cdots\right\} + \beta\left\{\zeta_{n+1}, \zeta_{n+2}, \cdots\right\}\\
+        &=\alpha A_n(\xi) + \beta A_n(\zeta)
+    \end{aligned}
+\end{equation*}
+
+则$A_n$为线性算子。
+
+对于任意的 $\left\{\xi_n\right\} \in l^{\infty}$, 我们有
+$$
+\left\|A_n\left\{\xi_1, \xi_2, \cdots\right\}\right\|_{\infty}=\sup _{k \geq 1}\left|\xi_{n+k}\right| \leq \sup _{k \geq 1}\left|\xi_k\right|=\left\|\left\{\xi_1, \xi_2, \cdots\right\}\right\|_{\infty},
+$$
+
+$A_n$有界，所以 $A_n \in B\left(l^{\infty} \rightarrow l^{\infty}\right)$ 。
+
+2. 对于任意的 $\left\{\xi_k\right\} \in l^{\infty}$, 我们有
+$$
+\left\|A_n\left\{\xi_1, \xi_2, \cdots\right\}\right\|_{\infty}=\sup _{k \geq 1}\left|\xi_{n+k}\right| \leq \sup _{k \geq 1}\left|\xi_k\right|=\left\|\left\{\xi_1, \xi_2, \cdots\right\}\right\|_{\infty},
+$$
+
+所以 $\left\|A_n\right\| \leq 1$ 。
+
+另一方面, 对于序列 $\xi_0=\{0,0, \cdots, 0,1,0,0, \cdots\}$ (第 $n+1$ 项为 1 , 其余项为 0 ), 我们有$\Vert A_n(\xi_0) \Vert_{\infty} = \Vert \xi_0 \Vert_{\infty} = 1$，所以 $\left\|A_n\right\| = \sup_{\Vert \xi \Vert \neq 0}\frac{\Vert A_n(\xi)\Vert}{\Vert \xi \Vert}\geq \frac{\Vert A_n(\xi_0)\Vert}{\Vert \xi_0 \Vert} = 1$ 。因此, $\lim _{n \rightarrow \infty}\left\|A_n\right\|=1$ 。
+
+3. 因为$l^{\infty}$为完备空间，只要证 $M$ 不为闭集即可。令 $x_n=\left\{1, {\frac{1}{2}}^{\frac{1}{p}}, \cdots, {\frac{1}{n}}^{\frac{1}{p}}, 0, \cdots\right\}, n=1,2, \cdots$, 则 $\left\{x_n\right\} \subset M$，令 $x=\left\{1, {\frac{1}{2}}^{\frac{1}{p}}, \cdots, {\frac{1}{n}}^{\frac{1}{p}}, \cdots\right\}$，显然 $x \in l^{\infty}$，且 $\rho\left(x_n, x\right)=\sup_{k \geq n+1} \frac{1}{k}=\frac{1}{n+1} \rightarrow 0(n \rightarrow \infty)$, 故 $x_n \rightarrow x(n \rightarrow \infty)$，$x$为$l$的一个极限点，但 $\Vert x \Vert = +\infty$，$x \notin M$。
+
+    \item $\left[\textbf{证明题}\right]$ 在复线性赋范空间 $l^2$ 中, 对每个自然数 $n$, 定义算子。
+    $$
+    A_n\left\{\xi_1, \xi_2, \cdots, \xi_n, \cdots\right\}=\left\{\xi_{n+1}, \xi_{n+2}, \cdots\right\},\left\{\xi_n\right\} \in l^2 。
+    $$
+    
+    证明: 1. $A_n \in B\left(l^2 \rightarrow l^2\right)$; 2. $\lim _{n \rightarrow \infty}\left\|A_{n}\right\|=1$; 3. 如果 $|\lambda|>1$, 则 $\lambda$ 为 $A_1$ 的正则值, 如果 $|\lambda|<1$, 则 $\lambda$ 为 $A_1$ 的特征值。
+
+    证: （1）对于$\forall \xi, \zeta \in l^2$，有
+
+\begin{equation*}
+    \begin{aligned}
+        A_n(\alpha \xi + \beta \zeta) &= A_n\left\{\alpha \xi_1 + \beta \zeta_1, \alpha \xi_2 + \beta \zeta_2, \cdots, \alpha \xi_{n} + \beta \zeta_{n}, \cdots\right\}\\
+        &= \left\{\alpha \xi_1 + \beta \zeta_1, \alpha \xi_2 + \beta \zeta_2, \cdots, \alpha \xi_{n-1} + \beta \zeta_{n-1}, \alpha \xi_{n+1} + \beta \zeta_{n+1}, \cdots\right\}\\
+        &=\alpha\left\{\xi_1, \xi_2, \cdots, \xi_{n-1}, \xi_{n+1}, \cdots\right\} + \beta\left\{\zeta_1, \zeta_2, \cdots, \zeta_{n-1}, \zeta_{n+1}, \cdots\right\}\\
+        &=\alpha A_n(\xi) + \beta A_n(\zeta)
+    \end{aligned}
+\end{equation*}
+
+则$A_n$为线性算子。
+
+对于$l^{2}$的任意元素$\xi$，有$\Vert A_n\xi \Vert = \sum_{k\neq n}\left| \xi_k \right| < \sum_{k=1}^{\infty}\left| \xi_n \right| = \Vert \xi \Vert < + \infty, n = 1, 2, \cdots$，因此$A_n \in B\left(l^2 \rightarrow l^2\right), n = 1, 2, \cdots$。
+
+(2) 由（1），对 $\forall \xi \in l^{2}, n \in N$, 有$\Vert A_n\xi \Vert \leq \Vert \xi \Vert$，故有，$\left\|A_n\right\| = \sup_{\Vert \xi \Vert \neq 0} \frac{\Vert A_n \xi \Vert}{\Vert \xi \Vert} \leq 1$ 。 又若令 $e_n=\{\overbrace{0, \cdots, 0}^{n-1}, 1,0, \cdots\}, n=1,2, \cdots$，则 $\left\|e_n\right\|=1$， 且 $A_n e_{n+1}=e_n$，故有，$\left\|A_n\right\| \geq \frac{\left\|A_n e_{n+1}\right\|}{\Vert e_{n+1} \Vert}=1$。于是，$\left\|A_n\right\|=1$。故 $\lim _{n \rightarrow \infty}\left\|A_n\right\|=1$。
+
+(3) 根据定理 4.6.1 可知，当 $|\lambda|>1=\left\|A_1\right\|$ 时，$\lambda$ 为 $A_1$ 的正则值。由于 $A_1$ 不是 $1-1$ 的，故 $\lambda=0$ 为 $A_1$ 的特征值，而当 $|\lambda|<1$，且 $\lambda \neq 0$ 时，令 $x=\{ \lambda, \lambda^2, \cdots\}$，则 $x \in l^{2}, x \neq \theta$，且 $\left(A_1-\lambda I\right) x=\theta, n=1,2, \cdots$，即方程 $\left(A_1-\lambda I\right) x=\theta$ 有非零解，故 $\lambda$ 为 $A_1$ 的特征值。
+
+\end{enumerate}
+
+\section{Hilbert空间}
+\subsection{题目}
+\begin{enumerate}
+    \item $\left[\textbf{选择题}\right]$ 设 $f$ 为 $n(n \geq 2)$ 维内积空间$U$上非零的线性泛函，记$M=\left\{x\in U \mid f(x)=0\right\}$，则下列结论不正确的是：\hfill [D]    
+        \begin{minipage}[t]{0.45\linewidth}
+        （A）$M$ 是一个 Hilbert 空间
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （B）$M$ 是 $U$ 的真子线性空间
+        \end{minipage}
+        \begin{minipage}[t]{0.45\linewidth}
+        （C）$M^{\perp}$ 是一个 1 维线性空间
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （D）$M^{\perp}$ 是一个 $n-1$ 维线性空间
+        \end{minipage}
+
+    解析：（1）（2）因为$f$为一个非零的线性泛函，则一定存在$x \in U$，但是$x \notin M$，则$M$是$U$的真子线性空间。（3）因为$f$为一个非零的线性泛函，则$f$的像空间$range(f)$至少有一个非$0$元素，维度为1，根据线性变换的基本定理，$dim(U) = dim(null(f)) + dim(range(f))$，因此$f$的零空间$M$的维度为$n-1$。
+
+    \item $\left[\textbf{选择题}\right]$ 设 $f$ 为 $n(n \geq 2)$ 维内积空间$U$上非零的线性泛函，记$M=\left\{x\in U \mid f(x)=0\right\}$，判断下列结论的正确性：（1）$M$ 是一个 Hilbert 空间；（2）$M$ 是 $U$ 的真子线性空间；（3）$M$ 是一个 $n-1$ 维线性空间\hfill [B]
+    
+        \begin{minipage}[t]{0.45\linewidth}
+        （A）3个都不正确
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （B）3个都正确
+        \end{minipage}
+        \begin{minipage}[t]{0.45\linewidth}
+        （C）（2）正确，（1）与（3）不正确
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （D）（1）与（2）正确，（3）不正确
+        \end{minipage}
+
+
+    \item $\left[\textbf{选择题}\right]$ 设$\left\{e_k\right\}$为不完备内积空间$U$中的标准直交系，记$M=\mathop{span}\left\{e_k\right\}$，则下列结论不正确的是：\hfill [C]
+    
+        \begin{minipage}[t]{0.45\linewidth}
+        （A）若$\left\{e_k\right\}$完备，则$M$在$U$中稠密
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （B）若$\overline{M}=U$，则$\left\{e_k\right\}$完备
+        \end{minipage}
+        \begin{minipage}[t]{0.45\linewidth}
+        （C）若$\left\{e_k\right\}$完全，则$M$在$U$中稠密
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\linewidth}
+        （D）若$\overline{M}=U$，则$\left\{e_k\right\}$完全
+        \end{minipage}
+
+    解析：$\left\{e_k\right\}$完备，则$U$中所有元素都能由$\left\{e_k\right\}$线性表示。因此（A）和（B）是正确的，又由$\left\{e_k\right\}$完备一定能推出$\left\{e_k\right\}$完全，一定能推出（D）完全。（C）不一定成立。
+    
+    \item $\left[\textbf{判断题}\right]$ 设$X$与$Y$为两个内积空间，$T$为$X$到$Y$的一个线性算子，若对任意的$x\in X$，均有$(Tx, Tx)=(x, x)$，则$X$与$TX$保内积线性同构。
+
+    答：正确。由$(Tx, Tx)=(x, x)$可知$U$上的范数$\Vert x \Vert = \sqrt{(x, x)}$，满足$\Vert Tx \Vert = \Vert x \Vert$，$T$是保范算子，且$T$是$X$到$TX$的1-1映射，因此T是$X$与$TX$之间的一个保范线性映射，$X$与$TX$保范线性同构，也因此$X$与$TX$保内积线性同构。
+
+    \item $\left[\textbf{判断题}\right]$ $\left\{\frac{1}{\sqrt{2 \pi}}, \frac{\cos x}{\sqrt{\pi}}, \frac{\sin x}{\sqrt{\pi}}, \frac{\cos 2 x}{\sqrt{\pi}}, \frac{\sin 2 x}{\sqrt{\pi}}, \cdots\right\}$ 为实内积空间 $L_{[-\pi, x]}^2$ 中一个完备的标准直交系，故对 $\forall f \in L_{[-\pi, \pi]}^2$，均有 $f$ 关于上述标准直交系的 Fourier 级数收敛到 $f$，因此，对 $\forall x \in[-\pi, \pi]$，有
+$$
+f(x)=\frac{a_0}{2} + \sum_{k=1}^{\infty}\left(a_k \cos k x+b_k \sin k x\right)
+$$
+
+成立。其中，
+$$
+a_k=\frac{1}{\pi} \int_{-\pi}^\pi f(x) \cos k x d x, k=0,1,2, \cdots, \quad b_k=\frac{1}{\pi} \int_{-\pi}^\pi f(x) \sin k x d x, k=1,2, \cdots
+$$
+
+    答：错误。
+    
+    \item $\left[\textbf{判断题}\right]$ 设$\left\{e_n\right\}_{n\in N}$为Hilbert空间$H$中的标准直交系，$T\in B(H\to H)$，记$e_{kn}=(Te_k, e_n)$，则对任意的$n\in N$，$\sum_{k=1}^{\infty}\left|e_{kn}\right|^2$收敛。
+
+    答：首先，$T\in B(H\to H)$，则存在一个常数$M < +\infty$，使得$\Vert Te_k\Vert ^ 2 = M$。根据Bessel不等式，对于Hilbert空间$H$中的标准直交系$\left\{e_n\right\}$，$x\in H$，我们有$\sum_{n=1}^{\infty}{\left|(x, e_n) \right|}^2 \leq {\Vert x \Vert} ^ 2$。因此对于$Te_k \in H$，有$\sum_{n=1}^{\infty}{\left|(Te_k, e_n) \right|}^2 = \sum_{n=1}^{\infty}{\left|e_{kn} \right|}^2 \leq {\Vert Te_k \Vert} ^ 2 = M$，则$\sum_{k=1}^{\infty}\left|e_{kn}\right|^2$收敛。
+
+    
+    \item $\left[\textbf{证明题}\right]$ 设 $H$ 为 Hilbert 空间, $T \in B(H \rightarrow H)$, 对给定的 $y \in H$, 定义 $f(x)=(T x, T y)$, (1) 证明 $f$ 为 $H$ 上的一个连续线性泛函: (2) 在 $T$ 和 $y$ 已知的条件下, 给出 $\|f\|$ 的一个表达式。
+
+解: (1) 由于 $T$ 线性，且内积关于第一变元线性，故 $f$ 线性。又 $T$ 连续，且内积关于第一变元连续，故 $f$ 连续; 或者，根据 Cauchy-Schwartz 不等式，有
+$$
+|f(x)|=|(T x, T y)| \leq\|T x\|\|T y\| \leq\|T y\|\|T\|\|x\|,
+$$
+
+故 $f$ 有界，从而连续。
+
+(2) 因为$H$是Hilbert空间，则$T$ 在 $H$ 上存在共轭算子 $T^*$，故 $f(x)=(T x, T y)=\left(x, T^* T y\right)$，于是，根据 Riesz表示定理可知，$\|f\|=\left\|T^* T y\right\|$ 。
+
+    \item $\left[\textbf{证明题}\right]$ 设 $\left\{e_1, e_2, \cdots, e_n\right\}$ 为 $n$ 维内积空间 $X$ 的一个标准直交系，$f$ 为 $X$ 上的一个线性泛函。1. 证明 $f$ 连续: (8 分) 2. 求 $f$ 的范数。(8 分)
+
+解: 1. 根据假设和线性空间维数的定义，$\left\{e_1, e_2, \cdots, e_n\right\}$ 也是 $X$ 完备的标准直交系，故对任意的 $x \in X$, 有 $x=\sum_{i=1}^n c_i e_i$，且 $\|x\|^2=\sum_{i=1}^n\left|c_i\right|^2$ 。由于 $f$ 线性，有
+$$
+\left|f(x)\right|=\left|f(\sum_{i=1}^n c_i e_i)\right|=\left|\sum_{i=1}^n c_i f\left(e_i\right)\right| \leq \sum_{i=1}^n\left|c_i f\left(e_i\right)\right|,
+$$
+
+又根据 Cauchy 不等式，有
+$$
+\left|f(x)\right| \leq \sum_{i=1}^n\left|c_i f\left(e_i\right)\right| \leq \sqrt{\sum_{i=1}^n\left|c_i\right|^2} \cdot \sqrt{\sum_{i=1}^n\left|f\left(e_i\right)\right|^2}=M\|x\|
+$$
+
+其中，$M=\sqrt{\sum_{i=1}^n\left|f\left(e_i\right)\right|^2}$ 。故 $f$ 有界，且 $\|f\| \leq M$，从而 $f$ 连续。
+
+2. 令 $y=\sum_{i=1}^n \overline{f\left(e_i\right)} e_i$，其中 $\overline{f\left(e_i\right)}$ 为 $f\left(e_i\right)$ 的共轭复数，显然
+
+$$\Vert y \Vert = \sqrt{\sum_{i=1}^{n}{\left|\overline{f\left(e_i\right)}\right|}^2}=\sqrt{\sum_{i=1}^n\left|f\left(e_i\right)\right|^2}=M,$$
+
+故
+$$
+\|y\|^2=\sum_{i=1}^n\left|f\left(e_i\right)\right|^2=\left|\sum_{i=1}^n \overline{f\left(e_i\right)} f\left(e_i\right)\right|=|f(y)| \leq\|f\|\|y\|,
+$$
+
+于是又有，$\|f\| \geq\|y\|=M$，故 $\|f\|=\sqrt{\sum_{i=1}^n\left|f\left(e_i\right)\right|^2}$ 。
+
+    \item $\left[\textbf{证明题}\right]$ 设 $f$ 为无限维内积空间 $U$ 上的线性泛函，令 $M=\{x \in U \mid f(x)=0\}$ 为 $f$ 的零空间
+，如果 $M^{\perp}$ 不是零维线性空间，试证明 $M^{\perp}$ 是一个 Hilbert 空间。(10 分)
+
+证: 根据假设存在 $x \in M^{\perp}$, 且 $x \neq \theta$ 。设 $x, y \in M^{\perp}$, 且 $x \neq \theta, y \neq \theta$, 则由于$M \cap M^{\perp} \subset\{\theta\}$, 故有 $f(x) \neq 0$ 。 又 $f$ 线性, 故 $f\left(y-\frac{f(y)}{f(x)} x\right)=0$, 于是 $y-\frac{f(y)}{f(x)} x \in M$ 。而 $M^{\perp}$ 是线性空间，故 $y-\frac{f(y)}{f(x)} x \in M^{\perp}$ 。于是, $y-\frac{f(y)}{f(x)} x=\theta$, 即 $x, y$ 线性相关。故 $M^{\perp}$ 只能是 1 维线性空间, 当然是 Hilbert 空间。
+
+    \item $\left[\textbf{证明题}\right]$ 设$M$为内积空间$U$的一个完备子空间，对固定的一个$a\in U$，定义$M$上的一个泛函$f(x)=\Vert x-a\Vert, x\in M$，试证明$f$可在$M$上取到最小值，且取到最小值的点是唯一的。
+
+    证：由投影定理，因为$M$为内积空间$U$的一个完备子空间，则对于任意$a \in U$，存在唯一的投影$p$，有$\|a-p\|=\min _{x \in M}\|a-x\|$，对于任意的 $x \in M$，我们都有 $\|a-p\| \leq\|a-x\|$，也就是说 $f(p) \leq f(x)$。因此，$f(x)$ 在 $M$上能取到唯一的最小值 $f(p)$。
+    
+    \item $\left[\textbf{证明题}\right]$ 设$M$为内积空间$U$的一个线性子空间，且$U$中的每个元素均在$M$上存在直交投影，对固定的一个$a\in U$，定义$M$上的一个泛函$f(x)=\Vert x-a\Vert, x\in M$，试证明$f$可在$M$上取到最小值，且取到最小值的点是唯一的。
+
+    证：先证对于任意的$a \in U$，如果$a$在$M$上的投影存在，则唯一。设$p, q \in M$为$a$在$M$上两个不同的投影，则$(a - p, p - q) = 0, (a - q, p - q) = 0$，两式相减有$(a - q, p - q) - (a - p, p - q) = (a-q - a + p, p - q) = (p - q, p - q) = 0$，与$p \neq q$矛盾。
+
+    剩下与第10题相同。
+
+    \item $\left[\textbf{证明题}\right]$ 设$\left\{e_n\right\}$为内积空间$X$中不完备的标准直交系，如果$M$在$X$中稠密，试证明：在$M$中至少存在一个元素，它不能由$\left\{e_n\right\}$中的有限个元素线性表示。
+
+    反证法：假设$M$中的任一元素都能由$\left\{e_n\right\}$线性表示。
+
+    因为$\left\{e_n\right\}$不完备，则存在$x \in X$，使$\epsilon = \Vert x \Vert ^ 2 - \sum_{k=1}^{\infty} \left|c_k\right|^2 > 0$。又因为$M$在$X$中稠密，则对于$\sqrt{\epsilon} > 0$，存在$m=\sum_{k=1}^{N} a_ke_k \in M$，使得$\Vert x - m\Vert < \sqrt{\epsilon}$，则有
+
+    \begin{equation*}
+        \begin{aligned}
+            \epsilon = \Vert x \Vert ^ 2 - \sum_{k=1}^{\infty} \left|c_k\right|^2 & \leq \Vert x \Vert ^ 2 - \sum_{k=1}^{N} \left|c_k\right|^2 = \Vert x- \sum_{k=1}^{N}c_k e_k \Vert ^ 2 \\ &\leq \Vert x- \sum_{k=1}^{N}a_k e_k \Vert ^ 2 = \Vert x- m \Vert ^ 2 \\
+            &< \epsilon
+        \end{aligned}
+    \end{equation*}
+
+显然矛盾，则在$M$中至少存在一个元素，它不能由$\left\{e_n\right\}$中的有限个元素线性表示。
+
+\item $\left[\textbf{证明题}\right]$ 设 $f$ 为 $n(n \geq 2)$ 维内积空间 $U$ 上非零的线性泛函, 令 $M=\{x \in U \mid f(x)=0\}$ 为 $f$的零空间, 记 $\operatorname{Dim}(V)$ 为线性空间 $V$ 的维数, 证明: 1. $\operatorname{Dim}(M)+\operatorname{Dim}\left(M^{\perp}\right)=n$;
+2. $\operatorname{Dim}(M)=n-1$。
+
+\end{enumerate}
+
+% \bibliographystyle{unsrtnat}
+% \bibliography{references}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
+
+
+%%% Uncomment this section and comment out the \bibliography{references} line above to use inline references.
+% \begin{thebibliography}{1}
+
+% 	\bibitem{kour2014real}
+% 	George Kour and Raid Saabne.
+% 	\newblock Real-time segmentation of on-line handwritten arabic script.
+% 	\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
+% 			International Conference on}, pages 417--422. IEEE, 2014.
+
+% 	\bibitem{kour2014fast}
+% 	George Kour and Raid Saabne.
+% 	\newblock Fast classification of handwritten on-line arabic characters.
+% 	\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
+% 			International Conference of}, pages 312--318. IEEE, 2014.
+
+% 	\bibitem{hadash2018estimate}
+% 	Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
+% 	Jacovi.
+% 	\newblock Estimate and replace: A novel approach to integrating deep neural
+% 	networks with existing applications.
+% 	\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
+
+% \end{thebibliography}
+
+
+\end{document}
