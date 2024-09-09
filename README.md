@@ -12,6 +12,6 @@
 上传GitHub是希望通过公开Latex源码，方便大家增添自己的内容。如果大家有开源的意愿，也欢迎提PR一起完善本文档:rocket:。
 
 ## :heart: 赞助
-如果觉得这份资料对你有帮助，可以请我喝杯咖啡:coffee:~
+如果觉得这份资料对你有帮助，可以请我喝杯咖啡 :coffee: ~
 
 <img src="figures/wechatpay.jpg" alt="微信" style="width: 200px; height: auto;">
