@@ -1,3 +1,6 @@
+## 预览
+<img src="figures/preview.jpg" alt="支付宝" style="height: auto;">
+
 ## Change Log
 
 ## 使用须知
@@ -10,4 +13,4 @@
 ## 赞助
 如果觉得这份资料对你有帮助，可以请我喝杯咖啡~
 
-<img src="figures/wechatpay.jpg" alt="支付宝" style="width: 200px; height: auto;">
+<img src="figures/wechatpay.jpg" alt="微信" style="width: 200px; height: auto;">
